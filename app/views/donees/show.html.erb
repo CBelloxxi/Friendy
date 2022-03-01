@@ -1,0 +1,13 @@
+<h1>show card of the donee</h1>
+
+<h2><%= @donee.first_name %> <%= @donee.last_name %> </h2>
+<p> <%= @donee.description %> </p>
+
+<%= link_to "All Donees", donees_path %>
+
+<%= link_to "Edit", edit_donee_path(@donee) %>
+
+<%= link_to "Delete #{@donee.first_name}?",
+    donee_path(@donee),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
