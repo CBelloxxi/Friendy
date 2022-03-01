@@ -1,0 +1,2 @@
+class DoneesController < ApplicationController
+end
