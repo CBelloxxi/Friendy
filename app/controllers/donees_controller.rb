@@ -46,6 +46,6 @@ class DoneesController < ApplicationController
   private
 
   def donee_params
-    params.require(:donee).permit(:first_name, :last_name, :description)
+    params.require(:donee).permit(:first_name, :last_name, :description, :photo)
   end
 end
