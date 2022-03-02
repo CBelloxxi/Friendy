@@ -3,8 +3,8 @@
   background-size: cover;
   background-position: center;
   padding: 268px 0;
-  height: 90%;
-  background-position: -430px;
+  height: 100%;
+  background-position: -505px;
 
 }
 
@@ -23,3 +23,45 @@ p {
 body.home .navbar {
   display: none !important;
  }
+
+.impact {
+  height: 100%;
+  width: 100vw;
+  margin-top: 64px;
+}
+
+.impact .text {
+  padding-left: 16px;
+}
+
+.impact .right {
+  text-align: right;
+}
+
+.impact p {
+  font-size: 16px;
+  color: black;
+}
+
+.impact h3 {
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+}
+
+
+.donees {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 32px;
+}
+
+.d-icon {
+  font-size: 109px;
+  color: #8D6A9F;
+  text-shadow: 2px 2px #777474;
+
+}
