@@ -1,5 +1,6 @@
 <h1>show card of the donee</h1>
 
+<%= cl_image_tag @donee.photo.key, height: 150, width: 150, crop: :fill %>
 <h2><%= @donee.first_name %> <%= @donee.last_name %> </h2>
 <p> <%= @donee.description %> </p>
 
