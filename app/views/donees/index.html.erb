@@ -3,6 +3,7 @@
 <ul>
   <% @donees.each do |donee| %>
     <li> <%= link_to donee.first_name, donee_path(donee) %> </li>
+
     <%= cl_image_tag donee.photo.key, height: 150, width: 150, crop: :fill %>
   <% end %>
 </ul>

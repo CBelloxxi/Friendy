@@ -1,2 +1,46 @@
 <h1>hello</h1>
 <p>Amount: <%= humanized_money_with_symbol(@donation.amount) %></p>
+
+<%# <%= form_with(model: donation) do |form| %>
+  <%# <% if donation.errors.any? %> %>
+    <%# <div id="error_explanation"> %>
+      <%# <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation to process:</h2> %>
+
+      <%# <ul> %>
+        <%# <% donation.errors.each do |error| %> %>
+          <%# <li><%= error.full_message %></li> %>
+        <%# <% end %> %>
+      <%# </ul> %>
+    <%# </div> %>
+  <%# <% end %> %>
+
+  <%# <div class="field"> %>
+    <%# <%= form.label :name %> %>
+    <%# <%= form.text_field :name %> %>
+  <%# </div> %>
+
+  <%# <div class="field"> %>
+    <%# <%= form.label :amount %> %>
+    <%# <%= form.select :amount, ["2", "5", "10", "other"] %> %>
+  <%# </div> %>
+
+  <%# <div class="field"> %>
+    <%# <%= form.label :price %> %>
+    <%# <%= form.text_field :price_cents %> %>
+  <%# </div> %>
+
+  <%# <div class="actions"> %>
+    <%# <%= form.submit %> %>
+  <%# </div> %>
+<%# <% end %> %>
+
+
+ <%= simple_form_for [@donee, @donation] do |f| %>
+
+           <%= @donee.first_name %>
+           <%= f.label :amount %>
+           <%= f.select :amount,["2", "5", "10"] %>
+           <%= f.label :amount %>
+           <%= f.text_field :amount %>
+           <%= f.submit "Submit" %>
+        <% end %> %>

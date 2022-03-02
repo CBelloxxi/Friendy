@@ -1,4 +1,5 @@
 class DonationsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
   before_action :find_donation, only: [:show]
   def show
     @donee = Donee.find(@donation.donee_id)
