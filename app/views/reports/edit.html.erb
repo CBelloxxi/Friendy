@@ -3,3 +3,14 @@
   data-mapbox-markers-value="<%= @markers.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+<div class="message-form" style="text-align:center;">
+  <br>
+  <textarea rows="4" cols="50" name="comment" form="usrform">
+  Leave message here...</textarea>
+  <button onclick="myFunction()"><%= link_to 'Submit', root_path, class: 'btn btn-outline-primary form-btn' %></button>
+  <script>
+  function myFunction() {
+    alert("Thank you, your SOS has been notified with the Friendy Team!");
+  }
+  </script>
+</div>
