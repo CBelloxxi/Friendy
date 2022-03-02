@@ -23,11 +23,13 @@ class DonationsController < ApplicationController
       render 'new'
     end
   end
+   def monetize
+   end
 
   private
 
   def donation_params
-  params.require(:donation).permit(:amount)
+  params.require(:donation).permit(:price_cents)
   end
 
   def find_donation
