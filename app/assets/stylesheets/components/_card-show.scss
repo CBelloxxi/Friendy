@@ -1,0 +1,55 @@
+.show-container {
+  width: 94vw;
+  height: 68vh;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.show-container p {
+  font-size: 16px;
+  color: #0e0000;
+}
+
+.show-container h2 {
+  font-size: 32px;
+  color: #C5CBD3;
+}
+
+.image img {
+  height: 320px;
+  width: 100%;
+    object-fit: cover;
+  object-fit: cover;
+  padding: 16px;
+  border-radius: 32px;
+}
+
+.card-infos {
+
+  padding: 0px 16px 0px 16px;
+}
+
+.buttons{
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-fr {
+
+  font-size: 16px;
+  display: inline-block;
+  background-color: #8D6A9F;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  }
+
+.btn-fr:hover {
+  background-color: #d8b5e9;
+  }

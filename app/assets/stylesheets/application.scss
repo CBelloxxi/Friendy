@@ -11,3 +11,32 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body, html {
+  height: 100%;
+}
+
+body {
+  // background: rgb(2,0,36);
+  background-image: linear-gradient(#C4CAE8, #BDEBE9);
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'Monofett', cursive;
+  color: white;
+  font-size: 46px;
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: white;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: white;
+  font-size: 16px;
+}

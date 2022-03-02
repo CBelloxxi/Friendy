@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 268px 0;
+  height: 90%;
+  background-position: -430px;
+
+}
+
+.home-font {
+  font-size: 48px;
+}
+
+.container {
+  padding-left: 24px;
+}
+p {
+  font-size: 24px;
+  color: white;
+}
+
+body.home .navbar {
+  display: none !important;
+ }

@@ -1,9 +1,12 @@
-<h1>Display all donees with search by location(map) function</h1>
+<%# <h1>Display all donees with search by location(map) function</h1>
 
 <ul>
   <% @donees.each do |donee| %>
-    <li> <%= link_to donee.first_name, donee_path(donee) %> </li>
-  <% end %>
-</ul>
-
+    <%# <li> <%= link_to donee.first_name, donee_path(donee) %>
+  <%# <% end %>
+<%# </ul>  %>
+<%#
 <%= link_to "Add new Donee", new_donee_path %>
+
+<%# <h2 style="margin-left: 24px; font-size:28px; padding-bottom: 36px;">Your donee's</h2> %>
+<%= render 'shared/card-show' %>
