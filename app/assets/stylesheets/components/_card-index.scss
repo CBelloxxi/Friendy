@@ -21,19 +21,27 @@
 }
 
 .name h2 {
+  margin: 0px;
+
+}
+
+.name a {
   font-size: 24px;
   margin-left: 115px;
   padding: 0px;
   margin-bottom: 0px;
+  font-weight: bold;
 }
 
 
 .img img {
   width: 136px;
+  height: 136px;
   border-radius: 50%;
   border: 5px solid #f6f4f7;
   position: absolute;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-left: 0px;
   margin-top: -117px;
+  object-fit: cover;
 }
