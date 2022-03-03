@@ -8,6 +8,8 @@
 
 <%= link_to "Edit", edit_donee_path(@donee) %>
 
+<%= link_to "Assistance", new_donee_report_path(@donee) %>
+
 <%= link_to "Delete #{@donee.first_name}?",
     donee_path(@donee),
     method: :delete,
