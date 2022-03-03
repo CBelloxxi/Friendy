@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :donees do
     resources :donations, only: %i[new create show]
   end
-  resources :reports, only: %i[new edit update show]
+  resources :reports, only: %i[new create edit update show]
 end
