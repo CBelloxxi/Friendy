@@ -1,9 +1,3 @@
-<h1>Display all donees with search by location(map) function</h1>
 
-<% @donees.each do |donee| %>
-  <%= cl_image_tag donee.photo.key, height: 150, width: 150, crop: :fill %><br>
-  <%= link_to donee.first_name, donee_path(donee) %><br>
-  <%= donee.location %><br>
-<% end %>
-
-<%= link_to "Add new Donee", new_donee_path %>
+<%# <h2 style="margin-left: 24px; font-size:28px; padding-bottom: 36px;">Your donee's</h2> %>
+<%= render 'shared/card-index' %>

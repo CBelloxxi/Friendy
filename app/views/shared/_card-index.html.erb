@@ -1,0 +1,25 @@
+
+
+<%# <div class="container">
+  <div class="name">
+    <h2><strong>David</strong> London</h2>
+  </div>
+  <div class="img">
+    <img src="https://kitt.lewagon.com/placeholder/users/Joe McIlroy"/>
+  </div>
+</div> %>
+
+<% @donees.each do |donee| %>
+  <div class="container">
+    <div class="name">
+      <h2><%= link_to donee.first_name, donee_path(donee) %></h2>
+      <h2><%= " #{donee.location}" %></h2>
+    </div>
+    <div class="img">
+      <%= cl_image_tag donee.photo.key, class: "img" %>
+    </div>
+  </div>
+<% end %>
+
+
+<%= link_to "Add new Donee", new_donee_path %>

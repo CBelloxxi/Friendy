@@ -1,12 +1,14 @@
-<%= simple_form_for(@donee) do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :location, collection: ['London', 'Birmingham', 'Liverpool', 'Brighton', 'Newcastle', 'Blackpool'] %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-
-<%= link_to "Back", donees_path %>
-
+ <div class="new-donee-form">
+  <%= simple_form_for(@donee) do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :location, collection: ['London', 'Birmingham', 'Liverpool', 'Brighton', 'Newcastle', 'Blackpool'] %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+  <div class="buttons">
+  <%= link_to "Back", donees_path, class: "btn-fr" %>
+  </div>
+</div>
 <%# need to add image to form and the qr code here%>

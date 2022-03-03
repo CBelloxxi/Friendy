@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_03_03_150901) do
     t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["donee_id"], name: "index_donations_on_donee_id"
     t.index ["user_id"], name: "index_donations_on_user_id"
   end
@@ -64,6 +65,18 @@ ActiveRecord::Schema.define(version: 2022_03_03_150901) do
     t.string "location"
     t.string "qr_code"
     t.index ["user_id"], name: "index_donees_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "donation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["donation_id"], name: "index_orders_on_donation_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "reports", force: :cascade do |t|
@@ -99,6 +112,8 @@ ActiveRecord::Schema.define(version: 2022_03_03_150901) do
   add_foreign_key "donations", "donees"
   add_foreign_key "donations", "users"
   add_foreign_key "donees", "users"
+  add_foreign_key "orders", "donations"
+  add_foreign_key "orders", "users"
   add_foreign_key "reports", "donees"
   add_foreign_key "reports", "users"
 end

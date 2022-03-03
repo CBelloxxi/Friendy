@@ -3,4 +3,11 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def impact
+  end
+
+  def index
+  end
+
 end
