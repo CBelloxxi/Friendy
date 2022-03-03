@@ -12,6 +12,9 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
@@ -20,8 +23,6 @@ a {
   color: white;
   text-decoration: none;
   font-size: 48px;
-
-
 }
 // .footer-links a:hover {
 //   opacity: 1;
