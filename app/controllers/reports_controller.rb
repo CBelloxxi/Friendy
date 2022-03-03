@@ -1,8 +1,8 @@
 class ReportsController < ApplicationController
-  before_action :find_report, only: [:show]
+  before_action :find_report, only: [:show, :edit]
   def edit
     @reports = Report.all
-    @donee = Donee.find(params[:id])
+    # @donee = Donee.find(params[:id])
     @markers = @reports.geocoded.map do |report|
       {
         lat: report.latitude,
@@ -14,7 +14,22 @@ class ReportsController < ApplicationController
   end
 
   def new
-    @reports = Report.new
+    @reports = Report.all
+    @report = Report.new
+    @markers = @reports.geocoded.map do |report|
+      {
+        lat: report.latitude,
+        lng: report.longitude,
+        report_window: render_to_string(partial: "report_window", locals: { report: report }),
+        image_url: helpers.asset_url("person-solid.svg")
+      }
+    end
+  end
+
+  def create
+    @report = Report.new(report_params)
+    @report.user = current_user
+    @report.save!
   end
 
   def update
@@ -38,6 +53,7 @@ class ReportsController < ApplicationController
   end
 
   def find_report
-    Donee.find(params[:id])
+    @report = Report.find(params[:id])
+    # Donee.find(params[:id])
   end
 end
