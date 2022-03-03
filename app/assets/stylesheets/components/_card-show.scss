@@ -23,7 +23,7 @@
 .image img {
   height: 320px;
   width: 100%;
-    object-fit: cover;
+  object-fit: cover;
   object-fit: cover;
   padding: 16px;
   border-radius: 32px;
@@ -35,9 +35,9 @@
 }
 
 .buttons{
-  padding: 8px;
+  padding: 8px 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .btn-fr {
@@ -50,9 +50,21 @@
   color: white;
   font-weight: bold;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  bottom: 0px;
+}
 
-  }
 
 .btn-fr:hover {
   background-color: #d8b5e9;
   }
+
+.qr-code {
+  height: 150px;
+  width: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
