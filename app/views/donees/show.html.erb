@@ -2,7 +2,12 @@
 
 <%= cl_image_tag @donee.photo.key, height: 150, width: 150, crop: :fill %>
 <h2><%= @donee.first_name %> <%= @donee.last_name %> </h2>
+<p> <%= @donee.location %> </p>
 <p> <%= @donee.description %> </p>
+
+<div class="qr-code">
+  <%= @qr_code.html_safe %>
+</div>
 
 <%= link_to "All Donees", donees_path %>
 
