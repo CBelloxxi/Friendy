@@ -1,0 +1,7 @@
+<div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+<h2>Thank you</h2>
+<p>Your report has been notified by the Friendy Team and <%= @report.donee.first_name %> is being attended to</p>

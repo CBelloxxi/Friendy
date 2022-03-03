@@ -1,12 +1,9 @@
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+<div>
   <br>
-  <%= simple_form_for(@report) do |f| %>
-    <%= f.input :location, collection: ["Essex", "London"] %>
+  <%= simple_form_for [@donee, @report] do |f| %>
+  <%= f.input :location, input_html: { data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
     <%= f.input :assistance_type, collection: ["Emergency", "Non-Emergency"] %>
     <%= f.input :message, as: :text %>
     <%= f.submit %>
   <% end %>
+</div>
