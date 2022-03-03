@@ -12,6 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
+@import "mapbox-gl/dist/mapbox-gl";
+@import "components/map";
+
 body, html {
   height: 100%;
 
@@ -43,3 +46,5 @@ h2 {
   color: white;
   font-size: 16px;
 }
+
+

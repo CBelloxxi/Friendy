@@ -1,9 +1,10 @@
-
-<div class="new-donee-form">
+ <div class="new-donee-form">
   <%= simple_form_for(@donee) do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
+    <%= f.input :location, collection: ['London', 'Birmingham', 'Liverpool', 'Brighton', 'Newcastle', 'Blackpool'] %>
     <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
   <div class="buttons">
