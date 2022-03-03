@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         name: donation.donee_id,
-        images: [donation.donee.photo_url],
+        images: [donation.donee.photo],
         amount: donation.price_cents,
         currency: 'gbp',
         quantity: 1

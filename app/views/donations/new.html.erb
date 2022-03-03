@@ -1,46 +1,32 @@
-<h1>hello</h1>
-<p>Amount: <%= humanized_money_with_symbol(@donation.amount) %></p>
+<h1>Donation</h1>
 
-<%# <%= form_with(model: donation) do |form| %>
-  <%# <% if donation.errors.any? %> %>
-    <%# <div id="error_explanation"> %>
-      <%# <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation to process:</h2> %>
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <%= image_tag(@donee.photo, width: '100%') %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h1><%= "#{@donee.first_name} #{@donee.last_name}" %></h1>
 
-      <%# <ul> %>
-        <%# <% donation.errors.each do |error| %> %>
-          <%# <li><%= error.full_message %></li> %>
-        <%# <% end %> %>
-      <%# </ul> %>
-    <%# </div> %>
-  <%# <% end %> %>
+      <%= simple_form_for [@donee, @donation] do |f| %>
 
-  <%# <div class="field"> %>
-    <%# <%= form.label :name %> %>
-    <%# <%= form.text_field :name %> %>
-  <%# </div> %>
+        <% if @donation.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation to process:</h2>
 
-  <%# <div class="field"> %>
-    <%# <%= form.label :amount %> %>
-    <%# <%= form.select :amount, ["2", "5", "10", "other"] %> %>
-  <%# </div> %>
+            <ul>
+            <% donation.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+            </ul>
+            </div>
+        <% end %>
 
-  <%# <div class="field"> %>
-    <%# <%= form.label :price %> %>
-    <%# <%= form.text_field :price_cents %> %>
-  <%# </div> %>
-
-  <%# <div class="actions"> %>
-    <%# <%= form.submit %> %>
-  <%# </div> %>
-<%# <% end %> %>
-
-
- <%= simple_form_for [@donee, @donation] do |f| %>
-
-           <%= @donee.first_name %>
-           <%= f.label :amount %>
-           <%= f.select :amount,["2", "5", "10"] %>
-           <%= f.label :amount %>
-           <%= f.text_field :amount %>
+           <%= f.label :Donate %>
+           <%= f.input :price_cents, collection: [200, 500, 100] %>
+           <%= f.text_area :message, size: "70x5", placeholder: "Here, you can write a custom message"%>
            <%= f.submit "Submit" %>
-        <% end %> %>
+          <% end %>
+    </div>
+  </div>
+</div>

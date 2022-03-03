@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
+
 
 gem 'cloudinary', '~> 1.16.0'
 gem "geocoder"
