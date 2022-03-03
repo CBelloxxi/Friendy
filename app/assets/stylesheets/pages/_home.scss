@@ -3,8 +3,8 @@
   background-size: cover;
   background-position: center;
   padding: 268px 0;
-  height: 89%;
-  background-position: -422px;
+  height: 100%;
+  background-position: -497px;
 }
 
 .home-font {
@@ -63,4 +63,11 @@ body.home .navbar {
   color: #8D6A9F;
   text-shadow: 2px 2px #777474;
 
+}
+
+.buttons-home{
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 206px;
 }
