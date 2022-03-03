@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :donees do
-    resources :donations, only: %i[new create]
-    resources :reports, only: %i[new create show]
-
+    resources :donations, only: %i[new create show]
+    resources :reports, only: %i[new create]
   end
+  resources :reports, only: %i[show]
 
   resources :donations, only: %i[show]
 
