@@ -25,7 +25,9 @@
     <% end %>
     <%= yield %>
 
-    <%= render 'shared/footer' %>
-    <%= render 'shared/flashes' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/footer' %>
+    <% end %>
+      <%# <%= render 'shared/flashes' %>
   </body>
 </html>

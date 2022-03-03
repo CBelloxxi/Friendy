@@ -5,6 +5,17 @@ class DoneesController < ApplicationController
 
   def show
     @donee = Donee.find(params[:id])
+    unless @donee.qr_code
+      @donee.qr_code = "#{request.base_url}#{donee_path(@donee)}"
+      @donee.save
+    end
+    @qr_code = RQRCode::QRCode.new(@donee.qr_code).as_svg(
+      offset: 0,
+      color: '000',
+      shape_rendering: 'crispEdges',
+      standalone: true,
+      module_size: 5
+    )
   end
 
   def new
@@ -46,6 +57,6 @@ class DoneesController < ApplicationController
   private
 
   def donee_params
-    params.require(:donee).permit(:first_name, :last_name, :description, :photo)
+    params.require(:donee).permit(:first_name, :last_name, :location, :description, :photo, :qr_code)
   end
 end

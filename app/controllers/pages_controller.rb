@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   def impact
   end
 
+  def index
+  end
+
 end

@@ -1,33 +1,15 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://www.terrycralle.com/wp-content/uploads/2020/05/How-to-Safely-Help-Homeless-People-During-Coronavirus-Pandemic-1600x900.jpg);">
+
+
   <div class="container">
     <h1 class="home-font">Friendy</h1>
     <p>Be a rainbow in someone else's cloud</p>
   </div>
+   <div class="buttons-home">
+    <% unless user_signed_in? %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn-fr" %>
+      <%= link_to "Log in", new_user_session_path, class: "btn-fr" %>
+    <% end %>
+    <%# <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-fr" %>
+  </div>
 </div>
-
-
-
-
-
-
- <%# <div class="donees">
-    <a href="#"><i class="d-icon fa fa-solid fa-qrcode"></i></a>
-    <div class="text">
-      <h3>£153,403</h3>
-      <p>Donated and counting</p>
-    </div>
-  </div>
-  <div class="donees">
-    <a href="#"><i class=" d-icon fa fa-solid fa-qrcode"></i></a>
-    <div class="text">
-      <h3>£153,403</h3>
-      <p>Donated and counting</p>
-    </div>
-  </div>
-  <div class="donees">
-    <a href="#"><i class=" d-iconfa fa-solid fa-qrcode"></i></a>
-    <div class="text">
-      <h3>2,304 </h3>
-      <p>Friendies signed up and helping those in need</p>
-    </div>
-  </div> %>

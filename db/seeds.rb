@@ -22,7 +22,7 @@ puts "Finished Creating User!"
 puts "Creating Donees..."
 
 file = URI.open('https://media.istockphoto.com/photos/up-close-photo-of-a-homeless-man-picture-id157168262?k=20&m=157168262&s=612x612&w=0&h=H6Sx1QXnKRNBpR_V9vE9vXoHyq2KHSe5yzT49KK4idA=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Chris',
   last_name: "Witaker",
@@ -33,7 +33,7 @@ donee.photo.attach(io: file, filename: 'Chris_Witaker.jpeg', content_type: 'imag
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/homeless-man-in-tokyo-japan-picture-id907853072?k=20&m=907853072&s=612x612&w=0&h=DH6YoL_GqYFzMS-fIYa_1lvni72pkKfaqbnKpvMdavU=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Tommy',
   last_name: "Tahana",
@@ -44,7 +44,7 @@ donee.photo.attach(io: file, filename: 'Tommy_Tahana.jpeg', content_type: 'image
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/happy-homeless-man-smiling-at-the-camera-outdoors-picture-id1346079651?k=20&m=1346079651&s=612x612&w=0&h=hjMb2GwjWYbq0bpS1IW1SYtLF5_U0Z8rO61kkHVgTGc=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Derick',
   last_name: "Romeo",
@@ -55,7 +55,7 @@ donee.photo.attach(io: file, filename: 'Derick_Romeo.jpeg', content_type: 'image
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/happy-homeless-man-picture-id177410923?k=20&m=177410923&s=612x612&w=0&h=8EZri-MYG5FbI8EsHKbJ11pxq5Yy886lfZTWjJLlbM8=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Robert',
   last_name: "Jones",
@@ -66,7 +66,7 @@ donee.photo.attach(io: file, filename: 'Robert_Jones.jpeg', content_type: 'image
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/happy-homeless-african-american-man-picture-id166092322?k=20&m=166092322&s=612x612&w=0&h=WweOqdVXyUN04uTa0ZL-eREa12EpgpwFvU5LvbgFsl4=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Noah',
   last_name: "Bohemiano",
@@ -77,7 +77,7 @@ donee.photo.attach(io: file, filename: 'Noah_Bohemiano.jpeg', content_type: 'ima
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/homeless-woman-with-bad-teeth-picture-id166092361?k=20&m=166092361&s=612x612&w=0&h=rvhqv1uD5-u77obvNP9j_4npBlzRNUY8uYuNaeHCTE8=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Tanya',
   last_name: "Bell",
@@ -88,7 +88,7 @@ donee.photo.attach(io: file, filename: 'Tanya_Bell.jpeg', content_type: 'image/j
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/homeless-woman-on-a-city-street-picture-id157396048?k=20&m=157396048&s=612x612&w=0&h=plXabuh3FRm7XUOGP6LUCl-DF8cx6iMC8PuYR8UucKI=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Denise',
   last_name: "Williams",
@@ -99,7 +99,7 @@ donee.photo.attach(io: file, filename: 'Denise_Williams.jpeg', content_type: 'im
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/elderly-homeless-senior-woman-in-an-abandoned-ruin-picture-id1281009268?k=20&m=1281009268&s=612x612&w=0&h=EGuuwWGkvFCTJ7iaKqoqznsvC1azMxvFy0LiqmFZd8Y=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Karen',
   last_name: "Jamerson",
@@ -110,7 +110,7 @@ donee.photo.attach(io: file, filename: 'Karen_Jamerson.jpeg', content_type: 'ima
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/homeless-woman-living-out-of-a-car-picture-id143922926?k=20&m=143922926&s=612x612&w=0&h=bDCfXMCvFlqfBYS0IG9sryqOKhutuaEm5qC8q5KTw64=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Sarah',
   last_name: "Daniels",
@@ -121,7 +121,7 @@ donee.photo.attach(io: file, filename: 'Sarah_Daniels.jpeg', content_type: 'imag
 donee.save!
 
 file = URI.open('https://media.istockphoto.com/photos/vulnerable-teenage-girl-sleeping-on-the-street-picture-id1154989126?k=20&m=1154989126&s=612x612&w=0&h=6bAjpx49sPCSNJMQvRXKZh7RAl7lrqsAahuvxQ35Hbw=')
-donee = Donee.new(
+donee = Donee.create(
   user: user,
   first_name: 'Demi',
   last_name: "Taylor",
