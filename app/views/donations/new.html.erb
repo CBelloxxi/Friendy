@@ -1,0 +1,32 @@
+<h1>Donation</h1>
+
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <%= image_tag(@donee.photo, width: '100%') %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h1><%= "#{@donee.first_name} #{@donee.last_name}" %></h1>
+
+      <%= simple_form_for [@donee, @donation] do |f| %>
+
+        <% if @donation.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation to process:</h2>
+
+            <ul>
+            <% donation.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+            </ul>
+            </div>
+        <% end %>
+
+           <%= f.label :Donate %>
+           <%= f.input :price_cents, collection: [200, 500, 100] %>
+           <%= f.text_area :message, size: "70x5", placeholder: "Here, you can write a custom message"%>
+           <%= f.submit "Submit" %>
+          <% end %>
+    </div>
+  </div>
+</div>
