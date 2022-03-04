@@ -14,7 +14,7 @@ class DoneesController < ApplicationController
       color: '000',
       shape_rendering: 'crispEdges',
       standalone: true,
-      module_size: 5
+      module_size: 2
     )
   end
 
