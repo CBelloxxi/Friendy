@@ -1,6 +1,6 @@
 .show-container {
   width: 94vw;
-  height: 68vh;
+  height: 70vh;
   background-color: white;
   padding: 0px;
   margin: 0px;
@@ -17,7 +17,15 @@
 
 .show-container h2 {
   font-size: 32px;
+  color: #8D6A9F;
+  padding-left: 0px;
+  
+}
+
+.show-container h5 {
+  font-size: 22px;
   color: #C5CBD3;
+  padding-top: 10px;
 }
 
 .image img {
@@ -41,7 +49,6 @@
 }
 
 .btn-fr {
-
   font-size: 16px;
   display: inline-block;
   background-color: #8D6A9F;
@@ -53,6 +60,24 @@
   bottom: 0px;
 }
 
+.btn-fr-1 {
+  font-size: 16px;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: solid;
+  border-color: #8D6A9F;
+  padding: 10px 20px;
+  color: #8D6A9F;
+  font-weight: bold;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  bottom: 0px;
+  text-decoration: none;
+}
+
+.btn-fr-1:hover {
+  background-color: #d8b5e9;
+  }
 
 .btn-fr:hover {
   background-color: #d8b5e9;
