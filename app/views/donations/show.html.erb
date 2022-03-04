@@ -1,4 +1,4 @@
-<p>Amount: <%= humanized_money_with_symbol(@donation.price) %></p>
+<p>Amount: <%= humanized_money_with_symbol((@donation.price)*100) %></p>
 <%= form_tag orders_path do %>
   <%= hidden_field_tag 'donation_id', @donation.id %>
   <%= submit_tag 'Donate', class: 'btn btn-primary' %>

@@ -1,5 +1,4 @@
-<h1>Donation</h1>
-
+ <div class="new-donee-form">
 <div class="container py-3">
   <div class="row">
     <div class="col-sm-12 col-md-6">
@@ -12,21 +11,33 @@
 
         <% if @donation.errors.any? %>
             <div id="error_explanation">
-            <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation to process:</h2>
+            <h2><%= pluralize(@donation.errors.count, "error") %> prohibited this donation to process:</h2>
 
             <ul>
-            <% donation.errors.each do |error| %>
+            <% @donation.errors.each do |error| %>
               <li><%= error.full_message %></li>
             <% end %>
             </ul>
             </div>
         <% end %>
 
-           <%= f.label :Donate %>
-           <%= f.input :price_cents, collection: [200, 500, 100] %>
-           <%= f.text_area :message, size: "70x5", placeholder: "Here, you can write a custom message"%>
-           <%= f.submit "Submit" %>
+           <%= f.label :Choose %>
+           <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
+           <%= f.input :message, placeholder: "Here, you can write a custom message"%>
+
+             <div class="buttons m-0">
+
+             <button type="submit" class="btn-fr" data-bs-toggle="modal" data-bs-target=<%= "#donate-modal"%>>
+              <%="Donate"%>
+            </button>
+
+
+
+
+           <%# <%= f.submit "Submit", class: "btn-fr" %>
+           </div>
           <% end %>
     </div>
   </div>
+</div>
 </div>
