@@ -7,10 +7,10 @@
         <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
         <li><strong>DONEE</strong> <%= @order.donation.donee.first_name %></li>
         <li><strong>USER</strong> <%= @order.donation.user.first_name %></li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
+        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol (@order.amount)*100 %></li>
         </li>
       </ul>
-      <p>optional <strong>Custom Message</strong></p>
+      <p><%= @order.donation.message %></p>
     </div>
   </div>
 </div>
