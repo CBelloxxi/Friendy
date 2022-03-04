@@ -1,6 +1,4 @@
-
-
-<div class="show-container">
+<%# <div class="show-container">
   <div class="image">
     <img src="https://kitt.lewagon.com/placeholder/users/Joe McIlroy"/>
   </div>
@@ -12,4 +10,36 @@
     <a href="#" class="btn-fr">Donate</a>
     <a href="#" class="btn-fr">Assistance</a>
   </div>
+</div> %>
+
+<div class="show-container">
+  <div class="image">
+    <%= cl_image_tag @donee.photo.key %>
+  </div>
+  <div class="card-infos">
+    <div class="top">
+      <h2><strong><%= @donee.first_name %></strong></h2>
+      <div class="qr-code">
+        <%= @qr_code.html_safe %>
+      </div>
+    </div>
+    <h2> <%= @donee.location %> </h2>
+    <p> <%= @donee.description %> </p>
+    <div class="buttons">
+      <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
+      <%= link_to "Donate", new_donee_report_path(@donee), class: "btn-fr"  %>
+      <%= link_to "Back", donees_path, class: "btn-fr"  %>
+  </div>
 </div>
+<%# donee_donation_path(@donee) %>
+<%# <%= link_to "All Donees", donees_path %>
+
+  <%# <%= link_to "Edit", edit_donee_path(@donee) %>
+<%#
+  <%= link_to "Assistance", new_donee_report_path(@donee) %>
+
+  <%# <%= link_to "Delete #{@donee.first_name}?", %>
+      <%# donee_path(@donee),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  <%# <%= link_to "Donate", new_donee_donation_path(@donee)%>
