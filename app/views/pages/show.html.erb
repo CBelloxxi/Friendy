@@ -1,20 +1,24 @@
-<h1>Your dashboard show</h1>
-<div class="show-container">
-  <div class="image">
-    <%= cl_image_tag @donee.photo.key %>
-  </div>
-  <div class="card-infos">
-    <div class="top">
-      <h2><strong><%= @donee.first_name %></strong></h2>
-      <div class="qr-code">
-        <%= @qr_code.html_safe %>
-      </div>
+
+<div class="dash-show">
+  <div class="dash-container">
+    <div class="dash-name">
+      <h3><%= @donee.first_name %></h3>
+      <h2><%= @donee.location %></h2>
     </div>
-    <h2> Donation History </h2>
-    <%# <p> <%= @donee.description %> </p>
-    <div class="buttons">
-      <%= link_to "Edit", edit_donee_path(@donee), class: "btn-fr"  %>
-      <%= link_to "Delete", new_donee_report_path(@donee), class: "btn-fr"  %>
-      <%= link_to "Back", dashboard_path, class: "btn-fr"  %>
+    <div class="img">
+        <%= cl_image_tag @donee.photo.key, class: "img" %>
+    </div>
+  </div>
+  <h2 style="padding-left: 24px; font-size: 24px; margin-top: 30px;">Donations history</h2>
+  <div class="history">
+    <% @donation_history.each do |donation| %>
+      <p><%= donation.created_at %></p>
+      <div class="cash-msg">
+        <h4><%= " £ #{donation.price_cents}" %></h4>
+      </div>
+    <% end %>
+  </div>
+  <div class="dash-buttons">
+    <%= link_to "Back", dashboard_path, class: "btn-fr"  %>
   </div>
 </div>
