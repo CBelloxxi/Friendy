@@ -8,14 +8,13 @@ class PagesController < ApplicationController
   end
 
   def index
-    @donees = Donee.all
+    @donees = current_user.donees
   end
 
   def show
     @user = current_user
-    @donee = @user.donees
-
     @donee = Donee.find(params[:donee_id])
+    @donation_history = Donation.where(user_id: current_user.id).and(Donation.where(donee_id: @donee.id))
     unless @donee.qr_code
       @donee.qr_code = "#{request.base_url}#{donee_path(@donee)}"
       @donee.save
