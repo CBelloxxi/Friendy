@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
       line_items: [{
         name: donation.donee_id,
         images: [donation.donee.photo],
-        amount: donation.price_cents,
+        amount: (donation.price_cents)*100,
         currency: 'gbp',
         quantity: 1
       }],

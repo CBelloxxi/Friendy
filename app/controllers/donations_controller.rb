@@ -37,7 +37,7 @@ class DonationsController < ApplicationController
   private
 
   def donation_params
-  params.require(:donation).permit(:price_cents)
+    params.require(:donation).permit(:price_cents, :message)
   end
 
   def find_donation
