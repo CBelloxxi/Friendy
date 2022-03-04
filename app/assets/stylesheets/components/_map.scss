@@ -6,3 +6,21 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+.mapboxgl-canvas{
+  border:black;
+  border-radius:30px;
+  justify-content:center;
+  padding:20px
+}
+.thank-you-message{
+  background-color: white;
+  opacity:0.5;
+  color:black;
+  border-radius:30px;
+  h2{
+    color:black;
+  }
+  p{
+    color:black;
+  }
+}
