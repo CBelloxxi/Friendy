@@ -3,28 +3,3 @@
   <%= hidden_field_tag 'donation_id', @donation.id %>
   <%= submit_tag 'Donate', class: 'btn btn-primary' %>
 <% end %>
-
-
-
-
-<div class="modal fade" id=<%= "donate-modal" %> data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby=<%= "staticBackdropLabel" %> aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id=<%= "staticBackdropLabel" %>>Donate</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <p>Amount: <%= humanized_money_with_symbol((@donation.price)*100) %></p>
-        <%= form_tag orders_path do %>
-        <%= hidden_field_tag 'donation_id', @donation.id %>
-        <%= submit_tag 'Donate', class: 'btn btn-primary' %>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <%# <%= link_to "Book #{@dog.name}", new_dog_booking_path(@dog), class: "btn btn-primary" %> %>
-      </div>
-    </div>
-  </div>
-</div>

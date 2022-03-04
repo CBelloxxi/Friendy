@@ -1,1 +1,14 @@
-<h1>Your dashboard index</h1>
+<h1> dashboard </h1>
+<% @donees.each do |donee| %>
+  <div class="container">
+    <div class="name">
+      <h2><%= link_to donee.first_name, dashboard_show_path(donee) %></h2>
+      <h2><%= " #{donee.location}" %></h2>
+    </div>
+    <div class="img">
+      <%= link_to dashboard_show_path(donee) do  %>
+        <%= cl_image_tag donee.photo.key, class: "img" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
