@@ -22,11 +22,11 @@ body, html {
 
 body {
   // background: rgb(2,0,36);
-  background-image: linear-gradient(#C4CAE8, #BDEBE9);
+  background-image: linear-gradient(#BDEBE9,#C4CAE8, #BDEBE9);
   background-size: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  background-repeat: repeat-y;
+  // overflow: hidden;
 }
 
 h1 {
