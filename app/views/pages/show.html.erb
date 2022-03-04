@@ -1,8 +1,8 @@
 
 <div class="dash-show">
-  <div class="container">
-    <div class="name">
-      <h2><%= @donee.first_name %></h2>
+  <div class="dash-container">
+    <div class="dash-name">
+      <h3><%= @donee.first_name %></h3>
       <h2><%= @donee.location %></h2>
     </div>
     <div class="img">
@@ -12,6 +12,12 @@
   <div class="history">
     <% @donation_history.each do |donation| %>
       <p><%= donation.created_at %></p>
+      <div class="cash-msg">
+        <h4><%= " £ #{donation.price_cents}" %></h4>
+      </div>
     <% end %>
+  </div>
+  <div class="dash-buttons">
+    <%= link_to "Back", dashboard_path, class: "btn-fr"  %>
   </div>
 </div>
