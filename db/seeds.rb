@@ -9,8 +9,8 @@
 require "open-uri"
 Order.destroy_all
 Donation.destroy_all
-User.destroy_all
 Donee.destroy_all
+User.destroy_all
 
 puts "Creating User..."
 
