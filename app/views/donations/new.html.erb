@@ -6,39 +6,29 @@
     <%= cl_image_tag @donee.photo.key %>
   </div>
   <div class="card-infos">
-    <div class="top">
-      <h2><strong><%= @donee.first_name %></strong></h2>
-      <h2 style=""><strong><%= @donee.location %></strong></h2>
-    </div>
-
     <%= simple_form_for [@donee, @donation] do |f| %>
       <% if @donation.errors.any? %>
         <div id="error_explanation">
-        <h2><%= pluralize(@donation.errors.count, "error") %> prohibited this donation to process:</h2>
-
-            <ul>
+          <h2><%= pluralize(@donation.errors.count, "error") %> prohibited this donation to process:</h2>
+          <ul>
             <% @donation.errors.each do |error| %>
               <li><%= error.full_message %></li>
             <% end %>
-            </ul>
-            </div>
-        <% end %>
-
-           <%= f.label :Choose %>
-           <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
-           <%= f.input :message, placeholder: "Here, you can write a custom message"%>
-
-             <div class="buttons">
-
-
-    <div class="buttons">
-      <%= f.submit "Submit", class: "btn-fr" %>
-      <%= link_to "Back", donees_path, class: "btn-fr"  %>
-    </div>
-
-
-
-           </div>
-          <% end %>
-
+          </ul>
+        </div>
+      <% end %>
+      <%= f.label :amount %>
+      <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
+      <%= f.input :message, placeholder: "Write a custom message"%>
+      <div class="buttons">
+        <%= f.submit "Submit", class: "btn-fr" %>
+        <%= link_to "Back", donees_path, class: "btn-fr" %>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+  <%# <div class="top">
+      <h2><strong><%= @donee.first_name %>
+      <%# <h2 style=""><strong><%= @donee.location</strong></h2>  %>
+    <%# </div>  %>

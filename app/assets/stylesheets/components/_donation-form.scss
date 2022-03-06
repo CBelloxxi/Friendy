@@ -22,7 +22,7 @@
 }
 
 .image-donation img {
-  height: 280px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   object-fit: cover;
@@ -68,4 +68,10 @@
   display: flex;
   justify-content: space-between;
   height: 35px;
+}
+
+.form-select {
+  border-radius: 10px;
+  border: none;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
 }
