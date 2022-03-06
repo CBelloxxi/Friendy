@@ -27,18 +27,19 @@
            <%= f.label :Choose %>
            <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
            <%= f.input :message, placeholder: "Here, you can write a custom message"%>
+           <%= f.submit "Submit", class: "btn-fr" %>
 
-             <div class="buttons">
 
 
-    <div class="buttons">
-      <%= f.submit "Submit", class: "btn-fr" %>
+    <%# <div class="buttons"> %>
+<%# <button type="button" class="btn-fr" data-toggle="modal" data-target="#exampleModal"><%= f.submit "Submit"%> %>
+<%# </button> %>
       <%= link_to "Back", donees_path, class: "btn-fr"  %>
-    </div>
+    <%# </div> %>
 
 
 
-           </div>
           <% end %>
+
 
 </div>
