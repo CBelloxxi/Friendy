@@ -9,12 +9,12 @@
         <%= cl_image_tag @donee.photo.key, class: "img" %>
     </div>
   </div>
-  <h2 style="padding-left: 24px; font-size: 24px; margin-top: 30px;">Donations history</h2>
+  <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Donations history</h2>
   <div class="history">
     <% @donation_history.each do |donation| %>
       <p><%= donation.created_at %></p>
       <div class="cash-msg">
-        <h4><%= " £ #{donation.price_cents}" %></h4>
+        <h4><%= "£#{donation.price_cents}" %></h4>
       </div>
     <% end %>
   </div>

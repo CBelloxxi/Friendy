@@ -1,22 +1,20 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"><%= image_tag @order.donation.donee.photo, width: '100%' %></div>
-    <div class="col">
-      <h1>Thank You! <%= @order.donation.user.first_name %></h1> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
-      <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>DONEE</strong> <%= @order.donation.donee.first_name %></li>
-        <li><strong>USER</strong> <%= @order.donation.user.first_name %></li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol (@order.amount)*100 %></li>
-        </li>
-      </ul>
-      <em><q><%= @order.donation.message %></q></em>
-    </div>
-    <div class="buttons">
-  <%= link_to "Back", dashboard_path, class: "btn-fr" %>
-  <%= link_to "Home", root_path, class: "btn-fr" %>
-
+<div class="show-container">
+  <div class="image">
+    <%= image_tag @order.donation.donee.photo %>
   </div>
+  <div class="card-infos">
+    <h2>Thanks <%= "#{@order.donation.user.first_name}!" %></h2>
+    <ul class="list-unstyled">
+      <li><strong>STATUS</strong> <%= @order.state %></li>
+      <li><strong>DATE</strong> <%= @order.created_at.to_date %></li>
+      <li><strong>DONEE</strong> <%= @order.donation.donee.first_name %></li>
+      <%# <li><strong>USER</strong> <%= @order.donation.user.first_name %>
+      <li><strong>TOTAL</strong> <%= humanized_money_with_symbol (@order.amount)*100 %></li>
+    </ul>
+    <em><q><%= @order.donation.message %></q></em>
+    <div class="buttons-conf">
+      <%= link_to "Dashboard", dashboard_path, class: "btn-fr" %>
+    </div>
   </div>
 </div>
 

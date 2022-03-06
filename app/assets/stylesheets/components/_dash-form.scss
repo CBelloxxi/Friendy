@@ -13,14 +13,15 @@
 
 .history {
   width: 86vw;
-  height: 30vh;
+  height: 33vh;
   background-color: #f9f9fa;
-  padding: 16px;
+  padding-top: 16px;
   margin: auto;
   border-radius: 32px;
   border:0;
-  margin-top: 21px;
-  margin-bottom: 32px;
+  margin-top: 10  px;
+  margin-bottom: 23px;
+  overflow: scroll;
 }
 
 .dash-container {
@@ -54,25 +55,25 @@
   color: rgb(179, 176, 176);
   font-size: 16px;
   margin-left: 32px;
-  margin-right: 12px;
+  margin-right: 32px;
   padding: 0px;
+  padding-top: 5px;
   margin-bottom: 0px;
   font-weight: bold;
-  overflow: scroll;
   font-family: 'Arimo', sans-serif;
-
+  border-top: 1px solid #C5CBD3;
 }
+
 .history h4{
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 32px;
-  margin-right: 12px;
+  margin-right: 32px;
   padding: 0px;
+  padding-bottom: 5px;
   margin-bottom: 0px;
   font-weight: bold;
-  overflow: scroll;
   font-family: 'Arimo', sans-serif;
-
 }
 
 .dash-buttons {
