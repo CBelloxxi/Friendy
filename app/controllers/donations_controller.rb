@@ -16,28 +16,23 @@ class DonationsController < ApplicationController
 
   def create
 
-
     @donee = Donee.find(params[:donee_id])
     @donation = Donation.new(donation_params)
     @donation.donee = @donee
     @donation.user = current_user
     if @donation.save
-
-
-
       flash[:success] = "Your payment has been successful!"
       redirect_to donation_path(@donation)
     else
       render 'new'
     end
   end
-  #  def monetize
-  #  end
+
 
   private
 
   def donation_params
-    params.require(:donation).permit(:price_cents, :message)
+    params.require(:donation).permit(:price_cents)
   end
 
   def find_donation
