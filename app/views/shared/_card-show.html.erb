@@ -13,7 +13,6 @@
 </div> %>
 
 <% if user_signed_in? %>
-
   <div class="show-container">
     <div class="image">
       <%= cl_image_tag @donee.photo.key %>
@@ -25,7 +24,7 @@
           <%= @qr_code.html_safe %>
         </div>
       </div>
-      <h5> <%= @donee.location %> </h5>
+      <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
       <p> <%= @donee.description %> </p>
       <div class="buttons">
         <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
@@ -43,13 +42,15 @@
           <%= @qr_code.html_safe %>
         </div>
       </div>
-      <h5> <%= @donee.location %> </h5>
+      <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
       <p> <%= @donee.description %> </p>
       <div class="buttons">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn-fr" %>
         <%= link_to "Log in", new_user_session_path, class: "btn-fr" %>
-        <%= link_to "Sign up", new_user_registration_path, class: "btn-fr" %> (params[:donee_id])
       </div>
     </div>
+    <%# <div class="card-infos">
+      <%= "Sign up or Login to Assist #{@donee.first_name} or to donate." %> </p>
   </div>
 <% end %>
 <%# donee_donation_path(@donee) %>

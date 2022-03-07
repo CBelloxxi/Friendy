@@ -22,7 +22,7 @@
                   <%= f.label :Other %>
       <%= f.input :price_cents,placeholder: "£", label: false  %>
 
-      <%= f.input :message, placeholder: "Write a custom message"%>
+      <%= f.input :message, placeholder: "Send #{@donee.first_name} a Note! ♥️"%>
       <div class="buttons">
         <%= f.submit "Submit", class: "btn-fr" %>
         <%= link_to "Back", donees_path, class: "btn-fr" %>
