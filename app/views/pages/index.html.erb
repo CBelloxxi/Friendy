@@ -13,8 +13,13 @@
         <%= cl_image_tag donee.photo.key, class: "img" %>
       <% end %>
     </div>
-    <div class="edit">
-      <%= link_to "edit", edit_donee_path(donee) %>
-    </div>
+  </div>
+  <%# <div class="edit">
+    <% link_to do %>
+      <%# <i class="fa fa-solid fa-file-pen" style="font-size: 2"></i>
+    <% end %>
+  <%# </div> %>
+  <div class="edit">
+    <%= link_to "edit", edit_donee_path(donee) %>
   </div>
 <% end %>
