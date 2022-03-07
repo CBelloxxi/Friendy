@@ -19,6 +19,9 @@
       <% end %>
       <%= f.label :amount %>
       <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
+                  <%= f.label :Other %>
+      <%= f.input :price_cents,placeholder: "£", label: false  %>
+
       <%= f.input :message, placeholder: "Write a custom message"%>
       <div class="buttons">
         <%= f.submit "Submit", class: "btn-fr" %>
