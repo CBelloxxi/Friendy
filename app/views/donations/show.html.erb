@@ -88,7 +88,7 @@ return false;
  <%= form_tag orders_path do %>
   <%= hidden_field_tag 'donation_id', @donation.id %>
   <%= submit_tag 'Donate', class: "btn-fr" %>
-  <%= link_to "Cancel", new_donee_donation_path(@donee), class: "btn-fr"%>
+  <%= link_to "Cancel", new_donee_donation_path(@donee), class: "btn-fr-1"%>
  <% end %>
 
 </p>

@@ -29,7 +29,7 @@
       <div class="buttons">
         <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
         <%= link_to "Donate", new_donee_donation_path(@donee), class: "btn-fr"  %>
-        <%= link_to "Back", donees_path, class: "btn-fr"  %>
+        <%= link_to "Back", donees_path, class: "btn-fr-1"  %>
         <% else %>
         <div class="show-container">
     <div class="image">
@@ -45,7 +45,7 @@
       <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
       <p> <%= @donee.description %> </p>
       <div class="buttons">
-        <%= link_to "Sign up", new_user_registration_path, class: "btn-fr" %>
+        <%= link_to "Sign up", new_user_registration_path, class: "btn-fr-1" %>
         <%= link_to "Log in", new_user_session_path, class: "btn-fr" %>
       </div>
     </div>

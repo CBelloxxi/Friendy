@@ -9,6 +9,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  color: #8D6A9F;
 }
 
 .new-donee-form input{
@@ -21,4 +22,8 @@ textarea.form-control {
   border-radius: 10px;
   border: none;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+
+.btn-fr-1 {
+  justify-content: space-between;
 }
