@@ -2,12 +2,11 @@
   <%= simple_form_for(@donee) do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :location, collection: ['London', 'Birmingham', 'Liverpool', 'Brighton', 'Newcastle', 'Blackpool'] %>
+    <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>
     <%= f.submit %>
+    <%= link_to "Back", donees_path, class: "btn-fr-1" %>
   <% end %>
-  <div class="buttons">
-  <%= link_to "Back", donees_path, class: "btn-fr-1" %>
   </div>
 </div>
