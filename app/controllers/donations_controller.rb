@@ -4,7 +4,6 @@ class DonationsController < ApplicationController
   before_action :find_donation, only: [:show]
 
   def show
-
     @donee = Donee.find(@donation.donee_id)
     @user = User.find(@donation.user_id)
   end

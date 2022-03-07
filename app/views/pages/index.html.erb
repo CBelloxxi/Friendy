@@ -1,17 +1,20 @@
 
-<h2 style="padding-left: 24px; font-size: 24px;">Your Friendy donations</h2>
+
+
+<%# <h2 style="padding-left: 24px; font-size: 24px;">Your Friendy donations</h2> %>
 <% @donees.each do |donee| %>
-  <div class="container">
-    <div class="name">
+  <div class="container-dash">
+    <div class="name-dash">
       <h2><%= link_to donee.first_name, dashboard_show_path(donee) %></h2>
       <h2><%= " #{donee.location}" %></h2>
     </div>
-    <div class="img">
+    <div class="img-dash">
       <%= link_to dashboard_show_path(donee) do  %>
         <%= cl_image_tag donee.photo.key, class: "img" %>
       <% end %>
     </div>
+    <div class="edit">
+      <%= link_to "edit", edit_donee_path(donee) %>
+    </div>
   </div>
 <% end %>
-<br>
-
