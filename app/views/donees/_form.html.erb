@@ -1,13 +1,17 @@
- <div class="new-donee-form">
+<div class="new-donee-form">
   <%= simple_form_for(@donee) do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :location, collection: ['London', 'Birmingham', 'Liverpool', 'Brighton', 'Newcastle', 'Blackpool'] %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <div class="buttons">
+      <%= f.submit class: "btn-fr"%>
+      <% if params[:controller]  == "donees" && params[:action] == "edit" %>
+        <%= link_to "Back", dashboard_path, class: "btn-fr-1" %>
+      <% else %>
+        <%= link_to "Back", donees_path, class: "btn-fr-1" %>
+      <% end %>
+    </div>
   <% end %>
-  <div class="buttons">
-  <%= link_to "Back", donees_path, class: "btn-fr-1" %>
-  </div>
 </div>

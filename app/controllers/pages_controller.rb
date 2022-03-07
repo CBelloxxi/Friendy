@@ -11,7 +11,6 @@ class PagesController < ApplicationController
     @donees = current_user.donees
   end
 
-
   def show
     @user = current_user
     @donee = Donee.find(params[:donee_id])
