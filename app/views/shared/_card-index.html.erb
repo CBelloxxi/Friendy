@@ -12,7 +12,8 @@
 
 
 <% @donees.each do |donee| %>
-  <div class="container">
+<div class="index-container">
+  <div class="container-index-card">
     <div class="name">
       <h2><%= link_to donee.first_name, donee_path(donee) %></h2>
       <h2><%= " #{donee.location}" %></h2>
@@ -23,4 +24,5 @@
       <% end %>
     </div>
   </div>
+</div>
 <% end %>

@@ -9,33 +9,36 @@
       <%= cl_image_tag @donee.photo.key, class: "img" %>
     </div>
   </div>
-  <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Donations history</h2>
-        <div class="history">
-          <% @donation_history.each do |donation| %>
-            <p><%= donation.created_at %></p>
-            <div class="cash-msg">
-              <h4><%= "£#{donation.price_cents}" %></h4>
-            </div>
-          <% end %>
-        </div>
+          <div class="history">
+            <% @donation_history.each do |donation| %>
+              <p><%= donation.created_at %></p>
+              <div class="cash-msg">
+                <h4><%= "£#{donation.price_cents}" %></h4>
+              </div>
+            <% end %>
+          </div>
       </div>
       <div class="carousel-item">
         <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Assistance history</h2>
-        <div class="history">
-          <% @donation_history.each do |donation| %>
-            <p><%= donation.created_at %></p>
-            <div class="cash-msg">
-              <h4><%= "£#{donation.price_cents}" %></h4>
-            </div>
-          <% end %>
-        </div>
+          <div class="history">
+            <% @donation_history.each do |donation| %>
+              <p><%= donation.created_at %></p>
+              <div class="cash-msg">
+                <h4><%= "£#{donation.price_cents}" %></h4>
+              </div>
+            <% end %>
+          </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -46,8 +49,8 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
-  <div class="dash-buttons">
-    <%= link_to "Back", dashboard_path, class: "btn-fr"  %>
+    <div class="dash-buttons">
+      <%= link_to "Back", dashboard_path, class: "btn-fr"  %>
+    </div>
   </div>
 </div>
