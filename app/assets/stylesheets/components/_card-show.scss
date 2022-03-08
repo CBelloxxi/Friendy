@@ -19,7 +19,7 @@
   font-size: 32px;
   color: #8D6A9F;
   padding-left: 0px;
-  
+
 }
 
 .show-container h5 {
@@ -84,6 +84,7 @@
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
   bottom: 0px;
   text-decoration: none;
+  margin: 0px;
 }
 
 .btn-fr-1:hover {
@@ -103,4 +104,14 @@
   display: flex;
   justify-content: space-between;
   height: 35px;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  margin-top: -80px;
+  width: 34px;
+  height: 5px;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: #d8b5e9;
 }
