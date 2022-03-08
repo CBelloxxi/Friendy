@@ -16,9 +16,16 @@ import "controllers"
 import "bootstrap"
 import AOS from 'aos';
 
-document.addEventListener('DOMContentLoaded', function() {
-  AOS.init({
-    startEvent: 'turbolinks:load', // if you are using turbolinks
-    duration: 2500
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//   AOS.init({
+//     startEvent: 'turbolinks:load', // if you are using turbolinks
+//     duration: 2500
+//   });
+// });
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  // initSelect2();
+  AOS.init();
+  duration: 2500
 });
