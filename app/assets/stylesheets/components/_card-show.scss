@@ -31,10 +31,12 @@
 .image img {
   height: 320px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   object-fit: cover;
   padding: 16px;
   border-radius: 32px;
+  margin-left: 0;
 }
 
 .card-infos {
@@ -98,10 +100,10 @@
 
 
 .carousel-indicators [data-bs-target] {
-  margin-top: -80px;
+  margin-top: -52px;
   width: 34px;
   height: 5px;
   margin-right: 4px;
   margin-left: 4px;
-  background-color: #d8b5e9;
+  background-color: white;
 }
