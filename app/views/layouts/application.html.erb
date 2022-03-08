@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
 
   <body>
@@ -29,6 +31,12 @@
     <% if user_signed_in? %>
       <%= render 'shared/footer' %>
     <% end %>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
       <%# <%= render 'shared/flashes' %>
   </body>
 </html>
