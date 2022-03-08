@@ -1,19 +1,22 @@
-<div class="map-card" style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-<form class="message-form" style="text-align:center;">
+<div class="new-report-form" style="text-align:center;">
   <br>
-  <%= simple_form_for(@report) do |report| %>
-    <%= report.input :location, collection: ["Essex", "London"] %>
-    <%= report.input :assistance_type, collection: ["Emergency", "Non-Emergency"] %>
-    <%= report.input :message, as: :text %>
+  <%= simple_form_for [@donee, @report] do |f| %>
+  <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+    <div class="checkbox" style="margin-top:30px; margin-bottom:30px;box-shadow:0 0 15px 4px rgba(0,0,0,0.1); border-radius:10px;">
+      <h2 style="color:black;margin-top:30px; margin-bottom:30px;">Assistance Type</h2>
+      <div class="checkbox-info" style="font-weight:bold;">
+        <%= check_box_tag "Emergency", "yes" %>
+        <%= label_tag "Emergency" %>
+        <%= check_box_tag "Non-Emergency", "yes" %>
+        <%= label_tag "Non-Emergency" %>
+      </div>
+    </div>
+    <%= f.input :message, as: :text %>
+    <div class="button">
+      <%= f.submit "Create Report" %>
+      <div class="back-btn">
+        <%= link_to "Back", donees_path, class: "btn-fr-1" %>
+      </div>
+    </div>
   <% end %>
-  <button onclick="myFunction()"><%= link_to 'Submit', root_path, class: 'btn btn-outline-primary form-btn' %></button>
-  <script>
-  function myFunction() {
-    alert("Thank you, your SOS has been notified with the Friendy Team!");
-  }
-  </script>
-</form>
+</div>

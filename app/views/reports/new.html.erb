@@ -1,8 +1,18 @@
 <div class="new-report-form" style="text-align:center;">
   <br>
   <%= simple_form_for [@donee, @report] do |f| %>
-  <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
-    <%= f.input :assistance_type, collection: ["Emergency", "Non-Emergency"] %>
+  <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] }, class: 'geocoder-text' } %>
+    <label for="assistance_type" style="margin-bottom:30px;">Assistance Type</label>
+    <div class="checkboxes"
+    data-controller="toggle-checkbox"
+    data-toggle-checkbox-target="checkboxes">
+      <div class="selection-boxes">
+        <%= f.input :assistance_type, as: :check_boxes, label: '&nbsp;'.html_safe, collection: [["Emergency", "Emergency"], ["Non-Emergency", "Non-Emergency"]],
+        input_html: {multiple: false, data: {
+        action: "change->toggle-checkbox#toggle",
+        toggle_checkbox_target: "selection"}} %>
+      </div>
+    </div>
     <%= f.input :message, as: :text %>
     <div class="button">
       <%= f.submit "Create Report" %>
