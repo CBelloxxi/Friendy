@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def index
-    @donees = current_user.donees
+    @donees = current_user.donations.map { |donation| donation.donee }
   end
 
   def show

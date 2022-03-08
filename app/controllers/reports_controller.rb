@@ -12,11 +12,16 @@ class ReportsController < ApplicationController
     @report = Report.new(report_params)
     @report.user = current_user
     @report.donee = @donee
-    if @report.save
+    @report.assistance_type = params[:report][:assistance_type][1]
+    if @report.save!
       redirect_to report_path(@report)
     else
       render :new
     end
+  end
+
+  def edit
+    @report = Report.find(params[:id])
   end
 
   def update
@@ -47,6 +52,6 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:message, :assistance_type, :location)
+    params.require(:report).permit(:message, :assistance_type, :location,)
   end
 end

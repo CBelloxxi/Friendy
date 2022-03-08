@@ -23,10 +23,14 @@
   </head>
 
   <body>
-    <% unless action_name == "home" %>
-      <%= render 'shared/navbar' %>
-    <% end %>
-    <%= yield %>
+    <div class="col-sm-12">
+      <% if params[:controller]  == "donees" && params[:action] == "index" %>
+        <%= render 'shared/search-bar' %>
+      <% end %>
+      <% unless action_name == "home" %>
+        <%= render 'shared/navbar' %>
+      <% end %>
+      <%= yield %>
 
     <% if user_signed_in? %>
       <%= render 'shared/footer' %>
@@ -38,5 +42,6 @@
     </script>
 
       <%# <%= render 'shared/flashes' %>
+    
   </body>
 </html>

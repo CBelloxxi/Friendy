@@ -5,12 +5,16 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  padding: 18px 10px 18px;
 }
 .mapboxgl-canvas{
   border:black;
   border-radius:30px;
   justify-content:center;
-  padding:20px
+  padding:20px;
+  canvas{
+    width: 395px;
+  }
 }
 .thank-you-message{
   background-color: white;
@@ -23,4 +27,91 @@
   p{
     color:black;
   }
+}
+.data-mapbox-markers-value{
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid red;
+  background: #ff0;
+}
+.edit {
+  a{
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  background-color:lightgrey;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  padding:5px;
+  border-radius:15px;
+  font-weight:bold;
+  }
+}
+.toggle {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggle + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.toggle + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.toggle:checked + label::before {
+  background-color: #1EDD88;
+}
+
+.toggle + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggle:checked + label::after {
+  left: 18px;
+}
+.pin-buttons{
+  display:flex;
+  justify-content: space-between;
+  margin-top:20px;
+  margin-right:10px;
+}
+.map-marker-info{
+  background-color:lightblue;
+  border-radius:10px;
+  font-weight:bold;
+}
+.mapboxgl-popup-content{
+  border-radius:10px;
+  border:black solid;
+}
+.mapboxgl-popup-close-button{
+  height:50px;
+  width:50px;
+  color:white;
+}
+.form-check-label{
+  color:black;
 }
