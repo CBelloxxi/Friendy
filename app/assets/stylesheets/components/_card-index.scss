@@ -1,8 +1,14 @@
 
 
-.container {
+.container-index-card {
   margin-top: 32px;
   margin-bottom: 70px;
+}
+
+.index-container {
+  display: flex;
+  justify-content: center;
+  height: 165px;
 }
 
 .name {
