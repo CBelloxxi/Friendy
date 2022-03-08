@@ -1,17 +1,18 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-friendy">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <h1><%= Friendy %></h1>
+      <h1 style="margin: 0px"><%= Friendy %></h1>
     <% end %>
-    <div class="">
-    <%# <% raise %>
-    <% if params[:controller]  == "pages" && (params[:action] == "index" || params[:action] == "show") %>
-      <h2><%= link_to 'Sign out', destroy_user_session_path, style: "font-size: 20px;", method: :delete, data: { confirm: 'Are you sure?' } %></h2>
-    <% else %>
-      <%= link_to new_donee_path do  %>
-         <i class="fa fa-regular fa-user-plus"></i>
+    <div class="dash-nav">
+      <% if params[:controller]  == "pages" && (params[:action] == "index" || params[:action] == "show") %>
+        <%= link_to new_donee_path do  %>
+          <i class="fa fa-regular fa-user-plus" ></i>
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= image_tag 'vectorpaint.svg', style: "color: white;" %>
+          <%# <i class="fa fa-regular fa-user-plus" style="margin-left: 10px;"></i> %>
+        <% end %>
       <% end %>
-    <% end%>
     </div>
   </div>
 </div>
