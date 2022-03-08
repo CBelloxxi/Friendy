@@ -33,7 +33,6 @@ background: #f3f3f3;
 position: relative;
 z-index: 103;
 padding: 15px 35px;
-border-radius: 5px;
 box-shadow: 0 2px 5px #000;
 }
 .cnt223 p{
@@ -88,7 +87,7 @@ return false;
  <%= form_tag orders_path do %>
   <%= hidden_field_tag 'donation_id', @donation.id %>
   <%= submit_tag 'Donate', class: "btn-fr" %>
-  <%= link_to "Cancel", new_donee_donation_path(@donee), class: "btn-fr"%>
+  <%= link_to "Cancel", new_donee_donation_path(@donee), class: "btn-fr-1"%>
  <% end %>
 
 </p>

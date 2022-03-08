@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  # devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   get 'dashboard', to: 'pages#index', as: 'dashboard'
   get 'dashboard/:donee_id', to: 'pages#show', as: 'dashboard_show'
   get 'impact', to: 'pages#impact', as: 'impact'
@@ -15,5 +16,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: %i[show create] do
     resources :payments, only: %i[new]
+  end
+
+  authenticated :user do
+    root to: 'pages#home', as: :authenticated_root
   end
 end

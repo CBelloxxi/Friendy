@@ -41,13 +41,15 @@ body.home .navbar {
 }
 
 .impact p {
-  font-size: 16px;
-  color: black;
+  font-family: 'Arimo';
+  font-size: 20px;
+  color: white;
 }
 
 .impact h3 {
+  font-family: 'Arimo';
   font-size: 32px;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -73,4 +75,20 @@ body.home .navbar {
   display: flex;
   justify-content: space-between;
   padding-top: 206px;
+}
+
+img {
+  border-radius: 8px;
+  width: 300px;
+  height: 225px;
+  margin-left: 45px;
+}
+
+.text-1 {
+  font-family: 'Arimo';
+  font-size: 16px;
+  color: white;
+  justify-content:center;
+  margin-left: 30px;
+  margin-right: 30px;
 }

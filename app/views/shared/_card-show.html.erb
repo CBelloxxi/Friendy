@@ -12,26 +12,48 @@
   </div>
 </div> %>
 
-<div class="show-container">
-  <div class="image">
-    <%= cl_image_tag @donee.photo.key %>
-  </div>
-  <div class="card-infos">
-    <div class="top">
-      <h2><strong><%= "#{@donee.first_name} #{@donee.last_name}" %></strong></h2>
-      <div class="qr-code">
-        <%= @qr_code.html_safe %>
+<% if user_signed_in? %>
+  <div class="show-container">
+    <div class="image">
+      <%= cl_image_tag @donee.photo.key %>
+    </div>
+    <div class="card-infos">
+      <div class="top">
+        <h2><strong><%= "#{@donee.first_name} #{@donee.last_name}" %></strong></h2>
+        <div class="qr-code">
+          <%= @qr_code.html_safe %>
+        </div>
+      </div>
+      <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
+      <p> <%= @donee.description %> </p>
+      <div class="buttons">
+        <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
+        <%= link_to "Donate", new_donee_donation_path(@donee), class: "btn-fr"  %>
+        <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;" %>
+        <% else %>
+        <div class="show-container">
+    <div class="image">
+      <%= cl_image_tag @donee.photo.key %>
+    </div>
+
+    <div class="card-infos">
+      <div class="top">
+        <h2><strong><%= "#{@donee.first_name} #{@donee.last_name}" %></strong></h2>
+        <div class="qr-code">
+          <%= @qr_code.html_safe %>
+        </div>
+      </div>
+      <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
+      <p> <%= @donee.description %> </p>
+      <div class="buttons">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn-fr-1" %>
+        <%= link_to "Log in", new_user_session_path, class: "btn-fr" %>
       </div>
     </div>
-    <h5> <%= @donee.location %> </h5>
-    <p> <%= @donee.description %> </p>
-    <div class="buttons">
-      <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
-      <%= link_to "Donate", new_donee_donation_path(@donee), class: "btn-fr"  %>
-      <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;"  %>
-    </div>
+    <%# <div class="card-infos">
+      <%= "Sign up or Login to Assist #{@donee.first_name} or to donate." %> </p>
   </div>
-</div>
+<% end %>
 <%# donee_donation_path(@donee) %>
 <%# <%= link_to "All Donees", donees_path %>
 

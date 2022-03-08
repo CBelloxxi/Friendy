@@ -1,9 +1,8 @@
-
 <div class="dash-show">
   <div class="dash-container">
     <div class="dash-name">
       <h3><%= @donee.first_name %></h3>
-      <h2><%= @donee.location %></h2>
+      <h2><%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %></h2>
     </div>
     <div class="img">
       <%= cl_image_tag @donee.photo.key, class: "img" %>
