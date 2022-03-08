@@ -21,6 +21,9 @@
   </head>
 
   <body>
+    <% if params[:controller]  == "donees" && params[:action] == "index" %>
+      <%= render 'shared/search-bar' %>
+    <% end %>
     <% unless action_name == "home" %>
       <%= render 'shared/navbar' %>
     <% end %>

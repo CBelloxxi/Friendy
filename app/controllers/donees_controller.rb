@@ -1,6 +1,17 @@
 class DoneesController < ApplicationController
+
   def index
-    @donees = Donee.all
+    if params[:query].present?
+      sql_query = " \
+        donees.location @@ :query \
+        OR donees.first_name @@ :query \
+        OR donees.last_name @@ :query \
+        "
+      @donees = Donee.where(sql_query, query: "%#{params[:query].capitalize}%")
+      # @donees = Donee.where(location: params[:query].capitalize)
+    else
+      @donees = Donee.all
+    end
   end
 
   def show

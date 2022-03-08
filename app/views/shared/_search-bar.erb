@@ -1,0 +1,16 @@
+<div class="search-form">
+    <div>
+      <%= form_tag donees_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        style: "width: 116%;",
+        placeholder: "Search by city or name"
+      %>
+    </div>
+    <div class="button-search" style="">
+      <%= submit_tag "Search", class: "btn-fr-2" %>
+      <% end %>
+      <%# <%= link_to 'Reset', donees_path, class: "btn-fr-1", style: "margin-bottom: 8px;" %>
+    </div>
+</div>
