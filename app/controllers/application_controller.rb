@@ -9,9 +9,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
 
-  # protected
+  protected
 
-  # def after_sign_in_path_for(resource)
-  #   request.referrer || root_path
-  # end
+  def after_sign_in_path_for(resource)
+    p request.referrer
+    p resource
+    p session[:redirect_path]
+    session[:redirect_path] || root_path
+  end
 end

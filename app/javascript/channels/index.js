@@ -8,6 +8,4 @@ channels.keys().forEach(channels)
 
 // You can also pass an optional settings object
 // below listed default settings
-AOS.init({
-  duration: 2500,
-});
+
