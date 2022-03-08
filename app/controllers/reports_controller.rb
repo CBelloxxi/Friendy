@@ -20,6 +20,10 @@ class ReportsController < ApplicationController
     end
   end
 
+  def edit
+    @report = Report.find(params[:id])
+  end
+
   def update
     @report = Report.find(params[:id])
     if @report.update(report_params)
@@ -48,6 +52,6 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:message, :assistance_type, :location)
+    params.require(:report).permit(:message, :assistance_type, :location,)
   end
 end
