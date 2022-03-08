@@ -1,6 +1,6 @@
 <div class="new-report-form" style="text-align:center;">
   <br>
-  <%= simple_form_for(@report) do |f| %>
+  <%= simple_form_for [@donee, @report] do |f| %>
   <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] }, class: 'geocoder-text' } %>
     <label for="assistance_type" style="margin-bottom:30px;">Assistance Type</label>
     <div class="checkboxes"

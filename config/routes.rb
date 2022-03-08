@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :donations, only: %i[new create show]
     resources :reports, only: %i[new create]
   end
-  resources :reports, only: %i[show]
+  resources :reports, only: %i[show edit update]
 
   resources :donations, only: %i[show]
 
