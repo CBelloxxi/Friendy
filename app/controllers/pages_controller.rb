@@ -26,7 +26,7 @@ class PagesController < ApplicationController
       standalone: true,
       module_size: 2
     )
-
+    @reports_history = Report.where(user_id: current_user.id)
     @donation = Donation.all
     @order = Order.all
   end
