@@ -50,7 +50,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  margin-top: 20px;
+  margin-top: 7px;
   margin-left: 141px;
 }
 
@@ -114,10 +114,12 @@
 .map-marker-info{
   background-color:#fdfdfd;
   border-radius:10px;
-  padding: 16px;
+  padding: 33px;
+  padding-top: 15px;
   color:#606163;
-
+  position: relative;
 }
+
 .mapboxgl-popup-content{
   border-radius:10px;
   border:none;
@@ -143,8 +145,4 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
-}
-
-.map-marker-info {
-
 }
