@@ -15,9 +15,8 @@
   <%= report.message %>
   </div>
   <div class="pin-buttons">
-    <%= simple_form_for(@report, data: {mapbox_target: "edit", action: "submit->mapbox#handleFormSubmit"}) do |f| %>
+    <%= simple_form_for(@report) do |f| %>
     <%= f.input :completed, as: :boolean, input_html: { class: "toggle" } %>
-    <%= f.submit "update", style: { display:':none' } %>
     <% end %>
     <div class="edit-button" style="font-size:10px; color:black;">
       <%= link_to "Edit", edit_report_path(@report)%>
