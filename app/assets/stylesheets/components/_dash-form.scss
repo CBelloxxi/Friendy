@@ -120,6 +120,23 @@
 .carousel-indicators {
   color: #C5CBD3;
 }
+
+.report-msg{
+  color: black;
+  font-size: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  font-family: 'Arimo', sans-serif;
+  p{
+    color:black;
+    margin-left:0px;
+    margin-bottom:15px;
+    margin-right:0px
+  }
+}
+
 .message{
   font-size:12px;
   font-style:italic;
@@ -138,6 +155,7 @@
     font-weight:bold;
   }
 }
+
 .mb-3{
     margin-bottom:0rem !important;
 }
