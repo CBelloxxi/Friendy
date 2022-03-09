@@ -1,23 +1,26 @@
-<div class="new-report-form" style="text-align:center;">
-  <br>
-  <%= simple_form_for [@donee, @report] do |f| %>
-  <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] }, class: 'geocoder-text' } %>
-    <div class="checkboxes"
-    data-controller="toggle-checkbox"
-    data-toggle-checkbox-target="checkboxes">
-      <div class="selection-boxes">
-        <%= f.input :assistance_type, as: :check_boxes, label: '&nbsp;'.html_safe, collection: [["Emergency", "Emergency"], ["Non-Emergency", "Non-Emergency"]],
-        input_html: {multiple: false, data: {
-        action: "change->toggle-checkbox#toggle",
-        toggle_checkbox_target: "selection"}} %>
+
+<div class="assist-container">
+  <div class="image-assistance">
+    <%= cl_image_tag @donee.photo.key %>
+  </div>
+  <div class="card-infos">
+    <%= simple_form_for [@donee, @report] do |f| %>
+      <%= f.input :location, input_html: { class: 'd-none', data: { geocoder_target: "location" } }, wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] }, class: 'geocoder-text' } %>
+      <div class="checkboxes"
+      data-controller="toggle-checkbox"
+      data-toggle-checkbox-target="checkboxes">
+        <div class="selection-boxes">
+          <%= f.input :assistance_type, as: :check_boxes, label: '&nbsp;'.html_safe, collection: [["Emergency", "Emergency"], ["Non-Emergency", "Non-Emergency"]],
+          input_html: {multiple: false, data: {
+          action: "change->toggle-checkbox#toggle",
+          toggle_checkbox_target: "selection"}} %>
+        </div>
       </div>
-    </div>
-    <%= f.input :message, as: :text %>
-    <div class="button">
-      <%= f.submit "Create Report" %>
-      <div class="back-btn">
-        <%= link_to "Back", donees_path, class: "btn-fr-1" %>
+      <%= f.input :message, as: :text %>
+      <div class="buttons", style="margin-top: 24px; padding: 0px;">
+        <%= f.submit "Create Report", class: "btn-fr" %>
+          <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin:0px;" %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

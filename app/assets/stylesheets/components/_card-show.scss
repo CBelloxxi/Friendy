@@ -1,6 +1,6 @@
 .show-container {
   width: 94vw;
-  height: 70vh;
+  height: 66vh;
   background-color: white;
   padding: 0px;
   margin: 0px;
@@ -8,6 +8,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow: scroll;
 }
 
 .show-container p {
