@@ -5,9 +5,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    session[:redirect_path] = request.referrer
+    super
+  end
 
   # POST /resource
   # def create
@@ -59,4 +60,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  protected
+
+  def after_sign_up_path_for(resource)
+    session[:redirect_path] || root_path
+  end
 end

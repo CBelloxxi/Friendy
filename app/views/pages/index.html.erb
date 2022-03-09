@@ -4,7 +4,7 @@
   <div class="container-dash">
     <div class="name-dash">
       <h2><%= link_to donee.first_name, dashboard_show_path(donee) %></h2>
-      <h2><%= " #{donee.location}" %></h2>
+      <h2><%= donee.location.include?(",") ? donee.location.split(",")[2] : donee.location %> </h2>
     </div>
     <div class="img-dash">
       <%= link_to dashboard_show_path(donee) do  %>
@@ -21,3 +21,5 @@
     <%= link_to "edit", edit_donee_path(donee) %>
   </div>
 <% end %>
+<br>
+<br>

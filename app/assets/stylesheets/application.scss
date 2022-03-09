@@ -14,6 +14,7 @@
 
 @import "mapbox-gl/dist/mapbox-gl";
 @import "components/map";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 body, html {
   height: 100%;
@@ -45,4 +46,10 @@ h2 {
   font-family: 'Arimo', sans-serif;
   color: white;
   font-size: 16px;
+}
+
+h6 {
+  font-family: 'Monofett', cursive;
+  color: #8D6A9F;
+  font-size: 50px;
 }

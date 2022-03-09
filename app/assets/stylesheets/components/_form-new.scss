@@ -1,6 +1,6 @@
 .new-donee-form {
   width: 94vw;
-  height: 65vh;
+  height: 70vh;
   background-color: white;
   padding: 16px;
   margin: 0px;
@@ -9,6 +9,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  color: #8D6A9F;
 }
 
 .search-form {
@@ -55,15 +56,17 @@
 }
 
 .new-donee-form input{
-
   border-radius: 10px;
   border: none;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
-
 }
 
 textarea.form-control {
   border-radius: 10px;
   border: none;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+
+.btn-fr-1 {
+  justify-content: space-between;
 }

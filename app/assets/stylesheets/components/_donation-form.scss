@@ -1,4 +1,16 @@
 
+.show-container-1 {
+  width: 94vw;
+  height: 77vh;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
 .show-container p {
   font-size: 16px;
   color: #0e0000;
@@ -16,6 +28,7 @@
   object-fit: cover;
   padding: 16px;
   border-radius: 32px;
+  margin-left: 0;
 }
 
 .image-assistance img {
@@ -63,7 +76,6 @@ fieldset {
 }
 
 .btn-fr {
-
   font-size: 16px;
   display: inline-block;
   background-color: #8D6A9F;
