@@ -8,24 +8,28 @@
   padding: 18px 10px 18px;
 }
 .mapboxgl-canvas{
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   border:black;
-  border-radius:30px;
   justify-content:center;
-  padding:20px;
+  padding:0px;
   canvas{
     width: 395px;
   }
 }
 .thank-you-message{
-  background-color: white;
-  opacity:0.5;
-  color:black;
-  border-radius:30px;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
   h2{
-    color:black;
+    color:#8D6A9F;
+    font-size: 20px;
+    font-weight: bold;
   }
   p{
-    color:black;
+    color:#606163;
+    font-size: 17px;
+    margin-bottom: 0px;
   }
 }
 .data-mapbox-markers-value{
@@ -35,18 +39,27 @@
   border: 1px solid red;
   background: #ff0;
 }
-.edit {
-  a{
-  color: black;
-  text-decoration: none;
-  font-size: 12px;
-  background-color:lightgrey;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
-  padding:5px;
-  border-radius:15px;
-  font-weight:bold;
-  }
+
+.edit-map {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #8D6A9F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin-top: 20px;
+  margin-left: 141px;
 }
+
+.edit-map a {
+  color: white;
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
+}
+
 .toggle {
   position: absolute;
   transform: scale(0);
@@ -95,17 +108,21 @@
 .pin-buttons{
   display:flex;
   justify-content: space-between;
-  margin-top:20px;
+  margin-top:-20px;
   margin-right:10px;
 }
 .map-marker-info{
-  background-color:lightblue;
+  background-color:#fdfdfd;
   border-radius:10px;
-  font-weight:bold;
+  padding: 16px;
+  color:#606163;
+
 }
 .mapboxgl-popup-content{
   border-radius:10px;
-  border:black solid;
+  border:none;
+  padding: 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 .mapboxgl-popup-close-button{
   height:50px;
@@ -114,4 +131,20 @@
 }
 .form-check-label{
   color:black;
+}
+
+.map-container {
+  width: 96vw;
+  height: 71vh;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.map-marker-info {
+
 }
