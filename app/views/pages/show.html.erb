@@ -34,14 +34,15 @@
           <% @reports_history.each do |report| %>
             <p><%= report.created_at %></p>
             <div class="report-msg">
-              <h6><%= "#{report.location}" %></h6>
-              <p><%= report.message %></p>
-              <% if report.completed  %>
-              <p>Completed</p>
-              <% else  %>
-              <p>In progress</p>
-              <%= link_to "View report", report_path(report)%>
-              <% end %>
+              <p><%= "#{report.location}" %></p>
+              <p class="message"><%= report.message %></p>
+              <div class="view-button d-flex" style="margin-right:5px;">
+                <div class="form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault<%= report.id %>">
+                  <label class="form-check-label-1" for="flexSwitchCheckDefault<%= report.id %>">Completed</label>
+                </div>
+                <%= link_to "Full report", report_path(report)%>
+              </div>
             </div>
           <% end %>
         </div>
