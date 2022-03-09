@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <div class="col-sm-12">
+    <div class="col-sm-12 col-md-" >
       <% if params[:controller]  == "donees" && params[:action] == "index" %>
         <%= render 'shared/search-bar' %>
       <% end %>
@@ -32,16 +32,9 @@
       <% end %>
       <%= yield %>
 
-    <% if user_signed_in? %>
-      <%= render 'shared/footer' %>
-    <% end %>
-
-    <%# <script src="https://unpkg.com/aos@next/dist/aos.js"></script> %>
-    <script>
-      // AOS.init();
-    </script>
-
-      <%# <%= render 'shared/flashes' %>
-    
+      <% if user_signed_in? %>
+        <%= render 'shared/footer' %>
+      <% end %>
+    </div>
   </body>
 </html>

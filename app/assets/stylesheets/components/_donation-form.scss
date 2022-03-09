@@ -9,6 +9,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow: scroll;
 }
 
 .show-container p {
@@ -38,6 +39,7 @@
   object-fit: cover;
   padding: 16px;
   border-radius: 32px;
+  margin: 0px;
 }
 
 .mapboxgl-ctrl {
