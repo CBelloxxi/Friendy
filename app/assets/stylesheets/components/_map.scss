@@ -8,24 +8,28 @@
   padding: 18px 10px 18px;
 }
 .mapboxgl-canvas{
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   border:black;
-  border-radius:30px;
   justify-content:center;
-  padding:20px;
+  padding:0px;
   canvas{
     width: 395px;
   }
 }
 .thank-you-message{
-  background-color: white;
-  opacity:0.5;
-  color:black;
-  border-radius:30px;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
   h2{
-    color:black;
+    color:#8D6A9F;
+    font-size: 20px;
+    font-weight: bold;
   }
   p{
-    color:black;
+    color:#606163;
+    font-size: 17px;
+    margin-bottom: 0px;
   }
 }
 .data-mapbox-markers-value{
@@ -35,32 +39,45 @@
   border: 1px solid red;
   background: #ff0;
 }
-.edit-button {
-  a{
-  color: black;
-  text-decoration: none;
-  font-size: 12px;
-  background-color:lightgrey;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
-  padding:5px;
-  border-radius:15px;
-  font-weight:bold;
-  }
+
+.edit-map {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #8D6A9F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin-top: 20px;
+  margin-left: 165px;
+}
+
+.edit-map a {
+  color: white;
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
 }
 .pin-buttons{
   display:flex;
   justify-content: space-between;
-  margin-top:20px;
+  margin-top:-20px;
   margin-right:10px;
 }
 .map-marker-info{
-  background-color:lightblue;
+  position: relative;
+  background-color:#fdfdfd;
   border-radius:10px;
-  font-weight:bold;
+  padding: 10px 10px 48px 10px;
+  color:#606163;
+
 }
 .mapboxgl-popup-content{
   border-radius:10px;
-  border:black solid;
+  border:none;
+  padding: 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 .mapboxgl-popup-close-button{
   height:50px;
@@ -69,4 +86,84 @@
 }
 .form-check-label{
   color:black;
+}
+
+.map-container {
+  width: 96vw;
+  height: 71vh;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.mapboxgl-ctrl-geocoder {
+  background-color: #EAEAEA;
+}
+
+.mapboxgl-ctrl-geocoder--input  {
+  box-shadow: none;
+}
+
+.form-check-input[type="checkbox"] {
+  position: absolute;
+  margin-left: 10px;
+}
+
+// .form-check-label {
+//   color: #f9fafb;
+//   position: relative;
+//   height: 35px;
+//   width: 132px;
+//   background-color: #1EDD88;
+//   border-radius: 10px;
+//   z-index: 1;
+//   padding: 0px;
+//   margin: 0px;
+// }
+
+.form-check {
+  padding: 0px;
+}
+
+.form-check-input[type="checkbox"] + .form-check-label {
+  cursor: pointer;
+  color: #f9fafb;
+  position: relative;
+  height: 35px;
+  width: 139px;
+  background-color: #C5CBD3;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+.form-check-input[type="checkbox"]:checked + .form-check-label {
+  cursor: pointer;
+  color: #f9fafb;
+  position: relative;
+  height: 35px;
+  width: 139px;
+  background-color: #64c89c;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(22, 107, 41, 0.6);
+}
+
+.form-control {
+  background-color: white;
 }

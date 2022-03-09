@@ -1,11 +1,101 @@
 
+<style type="text/css">
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  flex: 0 0 30%;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  padding: -1px 1px 0px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  font-family: 'Arimo', sans-serif;
+}
+
+.category-selector + label::before {
+  content: "£";
+  font-family: Font Awesome 5 Free;
+    /* left:-5px; */
+    /* position:absolute; */
+    /* top:0; */
+
+}
+
+.category-selector:checked + label {
+  color: white !important;
+}
 
 
-<div class="show-container-1">
+#donation_price_cents_2 + label {
+  color: #8D6A9F;
+}
+
+#donation_price_cents_2:checked + label {
+  background-color: #8D6A9F;
+  border-color: #8D6A9F;
+}
+
+
+#donation_price_cents_5 + label {
+  color: #8D6A9F;
+}
+
+#donation_price_cents_5:checked + label {
+  background-color: #8D6A9F;
+  border-color: #8D6A9F;
+}
+
+
+#donation_price_cents_10 + label {
+  color: #8D6A9F;
+}
+
+#donation_price_cents_10:checked + label {
+  background-color:#8D6A9F;
+  border-color: #8D6A9F;
+}
+.nice-class{
+  border-radius: 10px;
+}
+.show-container {
+    width: 94vw;
+    height: 80vh;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 32px;
+    margin: auto;
+    margin-top: 16px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    overflow: scroll;
+}
+</style>
+
+<%# data-controller="donation" %>
+<div class="show-container">
   <div class="image-donation">
     <%= cl_image_tag @donee.photo.key %>
   </div>
   <div class="card-infos">
+    <%# <div data-insert-in-list-target="items"> %>
     <%= simple_form_for [@donee, @donation] do |f| %>
       <% if @donation.errors.any? %>
         <div id="error_explanation">
@@ -17,21 +107,40 @@
           </ul>
         </div>
       <% end %>
-      <%= f.label :amount %>
-      <%= f.input :price_cents,label: false, collection: [2, 5, 10]  %>
-                  <%= f.label :Other %>
-      <%= f.input :price_cents,placeholder: "£", label: false  %>
+      <%= f.input :price_cents,label: "Amount: £", collection: [2, 5, 10], as: :radio_buttons,collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector' } %>
+
+      <%= f.label :"Other:" %>
+      <%= f.input :price_cents, label: false, disabled: true, placeholder: '£', input_html: { class: "nice-class", value: 'f154' }   %>
 
       <%= f.input :message, placeholder: "Send #{@donee.first_name} a Note! ♥️"%>
       <div class="buttons">
         <%= f.submit "Submit", class: "btn-fr" %>
-        <%= link_to "Back", donees_path, class: "btn-fr-1" %>
+        <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;" %>
       </div>
     <% end %>
-  </div>
 </div>
 
-  <%# <div class="top">
-      <h2><strong><%= @donee.first_name %>
-      <%# <h2 style=""><strong><%= @donee.location</strong></h2>  %>
-    <%# </div>  %>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+<script type="text/javascript">
+$(".nice-class input").on('keypress', function (event) {
+  // allow only int values
+  // TODO: remove leading 0
+  var regex = new RegExp("^[0-9]+$");
+  var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+  if (!regex.test(key)) {
+    event.preventDefault();
+    return false;
+  }
+  //document.getElementById(donation_price_cents).disabled = false;
+  // $("donation_price_cents").prop('disabled', false);
+
+});
+var el = document.getElementById("donation_price_cents");
+
+document.getElementById("donation_price_cents").addEventListener("click", function () {
+  $(this).prop('disabled', false);
+});
+</script>
