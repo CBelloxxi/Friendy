@@ -9,6 +9,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow: scroll;
 }
 
 .show-container p {
@@ -31,8 +32,42 @@
   margin-left: 0;
 }
 
-.card-infos {
+.image-assistance img {
+  height: 265px;
+  width: 100%;
+  object-fit: cover;
+  object-fit: cover;
+  padding: 16px;
+  border-radius: 32px;
+  margin: 0px;
+}
 
+.mapboxgl-ctrl {
+  height: 56px
+}
+
+.assist-container {
+  width: 94vw;
+  height: 74vh;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow: scroll;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  background-color: #F4F4F4;
+}
+
+fieldset {
+  margin-top: 32px;
+}
+
+.card-infos {
   padding: 0px 16px 0px 16px;
 }
 
