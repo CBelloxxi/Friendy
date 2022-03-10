@@ -18,7 +18,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Donations history</h2>
+        <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Donations History</h2>
           <div class="history">
             <% @donation_history.each do |donation| %>
               <p><%= (donation.created_at).strftime("%a, %b %d %Y ") %></p>
@@ -29,7 +29,7 @@
           </div>
       </div>
       <div class="carousel-item">
-        <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Assistance history</h2>
+        <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Assistance History</h2>
         <div class="history">
           <% @reports_history.each do |report| %>
             <p><%= (report.created_at).strftime("%a, %b %d %Y ") %></p>
