@@ -41,35 +41,29 @@
 }
 
 .edit-map {
-  position: absolute;
   width: 48px;
   height: 48px;
-  background-color: #8D6A9F;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-top: 20px;
   margin-left: 165px;
 }
 
-.edit-map a {
-  color: white;
-  font-size: 14px;
-  font-family: 'Arimo', sans-serif;
+.edit-map img {
+    width: 31px;
+    height: 31px;
+    margin-left: -19px;
 }
+
 .pin-buttons{
-  display:flex;
-  justify-content: space-between;
-  margin-top:-20px;
-  margin-right:10px;
+  width: 31px;
+  height: 31px;
+  margin-left: 18px;
+  margin-top: 7px;
 }
 .map-marker-info{
   position: relative;
   background-color:#fdfdfd;
   border-radius:10px;
-  padding: 10px 10px 48px 10px;
+  padding: 10px ;
   color:#606163;
 
 }
