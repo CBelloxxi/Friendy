@@ -10,7 +10,8 @@
         <%= f.input :assistance_type, as: :check_boxes, label: '&nbsp;'.html_safe, collection: [["Emergency", "Emergency"], ["Non-Emergency", "Non-Emergency"]],
         input_html: {multiple: false, data: {
         action: "change->toggle-checkbox#toggle",
-        toggle_checkbox_target: "selection"}} %>
+        toggle_checkbox_target: "selection"},
+        class: "remove_checkbox"} %>
       </div>
     </div>
     <%= f.input :message, as: :text %>
