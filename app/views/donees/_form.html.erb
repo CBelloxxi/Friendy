@@ -6,8 +6,8 @@
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>
     <div class="buttons">
-      <%= f.submit class: "btn-fr"%>
-        <%= link_to "Back", dashboard_path, class: "btn-fr-1" %>
+      <%= link_to "Back", dashboard_path, class: "btn-fr-1", style: "margin: 0px; margin-top:20px"%>
+      <%= f.submit class: "btn-fr", style: "margin: 0px; margin-top: 20px"%>
     </div>
   <% end %>
 </div>
