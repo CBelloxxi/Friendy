@@ -18,7 +18,7 @@
   }
 }
 .thank-you-message{
-  margin-top: 16px;
+  margin-top: 29px;
   margin-left: 10px;
   margin-right: 10px;
   h2{
@@ -109,8 +109,13 @@
 
 .form-check-input[type="checkbox"] {
   // position: absolute;
-  margin-left: 10px;
+  margin-left: 0px;
 }
+
+.form-switch {
+  padding-left: 0;
+}
+
 
 // .form-check-label {
 //   color: #f9fafb;
