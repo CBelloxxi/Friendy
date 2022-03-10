@@ -27,9 +27,9 @@
       <h5> <%= @donee.location.include?(",") ? @donee.location.split(",")[2] : @donee.location %> </h5>
       <p> <%= @donee.description %> </p>
       <div class="buttons">
+        <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;" %>
         <%= link_to "Assistance", new_donee_report_path(@donee), class: "btn-fr"  %>
         <%= link_to "Donate", new_donee_donation_path(@donee), class: "btn-fr"  %>
-        <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;" %>
         <% else %>
         <div class="show-container">
     <div class="image">
