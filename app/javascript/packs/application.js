@@ -26,6 +26,7 @@ import AOS from 'aos';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  AOS.init();
-  duration: 2500
+  AOS.init(
+    {duration: 2500});
+
 });

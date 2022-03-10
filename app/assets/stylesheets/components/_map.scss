@@ -150,8 +150,9 @@
 
 }
 
-.mapboxgl-ctrl-geocoder {
+.mapboxgl-ctrl-geocoder:last-child {
   background-color: #EAEAEA;
+  display: none;
 }
 
 .mapboxgl-ctrl-geocoder--input  {
