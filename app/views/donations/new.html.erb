@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: -25px;
 }
 
 .category-item {
@@ -20,7 +21,7 @@
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
-  font-size: 50px;
+  font-size: 32px;
   text-align: center;
   padding: -1px 1px 0px 10px;
   border: 1px solid #EAEAEA;
@@ -116,7 +117,7 @@
       <%= f.input :price_cents, label: false, disabled: true, placeholder: '£', input_html: { class: "nice-class", value: 'f154' }   %>
 
       <%= f.input :message, placeholder: "Send #{@donee.first_name} a Note! ♥️"%>
-      <div class="buttons">
+      <div class="buttons", style="margin-top: 10px;">
         <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin: 0px;" %>
         <%= f.submit "Submit", class: "btn-fr" %>
       </div>
