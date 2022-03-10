@@ -21,7 +21,7 @@
         <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Donations history</h2>
           <div class="history">
             <% @donation_history.each do |donation| %>
-              <p><%= donation.created_at %></p>
+              <p><%= (donation.created_at).strftime("%a, %b %d %Y ") %></p>
               <div class="cash-msg">
                 <h4><%= "£#{donation.price_cents}" %></h4>
               </div>
@@ -32,7 +32,7 @@
         <h2 style="padding-left: 32px; font-size: 24px; margin-top: 30px;">Assistance history</h2>
         <div class="history">
           <% @reports_history.each do |report| %>
-            <p><%= report.created_at %></p>
+            <p><%= (report.created_at).strftime("%a, %b %d %Y ") %></p>
             <div class="report-msg">
               <p><%= "#{report.location}" %></p>
               <p class="message"><%= report.message %></p>
