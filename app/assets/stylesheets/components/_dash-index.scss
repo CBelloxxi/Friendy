@@ -1,9 +1,8 @@
-
-
 .container-dash {
-  margin-top: 32px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 70px;
-  padding-left: 24px
+  padding-left: 24px;
 }
 
 .name-dash {
@@ -18,13 +17,12 @@
   margin-left: 32px;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .name-dash h2 {
   margin: 0px;
-  color: #8D6A9F;
-
+  color: #8d6a9f;
 }
 
 .name-dash a {
@@ -34,9 +32,8 @@
   padding: 0px;
   margin-bottom: 0px;
   font-weight: bold;
-  color: #8D6A9F;
+  color: #8d6a9f;
 }
-
 
 .img-dash img {
   width: 136px;
@@ -44,9 +41,9 @@
   border-radius: 50%;
   border: 5px solid #f5f2f7;
   position: absolute;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-left: 0px;
-  margin-top: -117px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-left: -364px;
+  margin-top: -17px;
   object-fit: cover;
 }
 
@@ -54,12 +51,12 @@
   position: absolute;
   width: 48px;
   height: 48px;
-  background-color: #8D6A9F;
+  background-color: #8d6a9f;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-top: -96px;
   margin-left: 124px;
 }
@@ -67,9 +64,8 @@
 .edit a {
   color: white;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
-
 
 // .fa-chart-pie:before {
 //   content: "\f200";

@@ -7,32 +7,32 @@
   font-family: "Open Sans", sans-serif;
   padding: 18px 10px 18px;
 }
-.mapboxgl-canvas{
+.mapboxgl-canvas {
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  border:black;
-  justify-content:center;
-  padding:0px;
-  canvas{
+  border: black;
+  justify-content: center;
+  padding: 0px;
+  canvas {
     width: 395px;
   }
 }
-.thank-you-message{
+.thank-you-message {
   margin-top: 29px;
   margin-left: 10px;
   margin-right: 10px;
-  h2{
-    color:#8D6A9F;
+  h2 {
+    color: #8d6a9f;
     font-size: 20px;
     font-weight: bold;
   }
-  p{
-    color:#606163;
+  p {
+    color: #606163;
     font-size: 17px;
     margin-bottom: 0px;
   }
 }
-.data-mapbox-markers-value{
+.data-mapbox-markers-value {
   height: 200px;
   width: 300px;
   overflow: hidden;
@@ -48,62 +48,60 @@
 }
 
 .edit-map img {
-    width: 31px;
-    height: 31px;
-    margin-left: -19px;
+  width: 31px;
+  height: 31px;
+  margin-left: -19px;
 }
 
-.pin-buttons{
+.pin-buttons {
   width: 31px;
   height: 31px;
   margin-left: 18px;
   margin-top: 7px;
 }
-.map-marker-info{
+.map-marker-info {
   position: relative;
-  background-color:#fdfdfd;
-  border-radius:10px;
-  padding: 10px ;
-  color:#606163;
-
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 10px;
+  color: #606163;
 }
-.mapboxgl-popup-content{
-  border-radius:10px;
-  border:none;
+.mapboxgl-popup-content {
+  border-radius: 10px;
+  border: none;
   padding: 0px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
-.mapboxgl-popup-close-button{
-  height:50px;
-  width:50px;
-  color:white;
+.mapboxgl-popup-close-button {
+  height: 50px;
+  width: 50px;
+  color: white;
 }
-.form-check-label{
-  color:black;
+.form-check-label {
+  color: black;
 }
 
 .map-container {
   width: 96vw;
-  height: 71vh;
+  height: 73vh;
   background-color: white;
   padding: 0px;
   margin: 0px;
   border-radius: 32px;
   margin: auto;
   margin-top: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 .map-marker-info {
-
 }
 
 .mapboxgl-ctrl-geocoder:last-child {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   display: none;
 }
 
-.mapboxgl-ctrl-geocoder--input  {
+.mapboxgl-ctrl-geocoder--input {
   box-shadow: none;
 }
 
@@ -115,7 +113,6 @@
 .form-switch {
   padding-left: 0;
 }
-
 
 // .form-check-label {
 //   color: #f9fafb;
@@ -139,18 +136,15 @@
   position: relative;
   height: 35px;
   width: 139px;
-  background-color: #C5CBD3;
+  background-color: #c5cbd3;
   border-radius: 10px;
   padding: 0px;
   margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
-
-
 
 .form-check-input[type="checkbox"]:checked + .form-check-label {
   cursor: pointer;

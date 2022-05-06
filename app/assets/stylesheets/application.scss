@@ -16,40 +16,46 @@
 @import "components/map";
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
-body, html {
-  height: 100%;
+* {
+  // max-width: 600px;
+}
 
+body,
+html {
+  height: 100%;
 }
 
 body {
   // background: rgb(2,0,36);
-  background-image: linear-gradient(#BDEBE9,#C4CAE8, #BDEBE9);
-  background-size: 100%;
+  background-image: linear-gradient(#bdebe9, #c4cae8);
+  background-position: fixed;
+  // background-size: 100%;
   margin: 0;
+
   // background-repeat: repeat-y;
   // overflow: scroll;
 }
 
 h1 {
-  font-family: 'Monofett', cursive;
+  font-family: "Monofett", cursive;
   color: white;
   font-size: 46px;
 }
 
 h2 {
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   color: white;
   font-size: 24px;
 }
 
 h2 {
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   color: white;
   font-size: 16px;
 }
 
 h6 {
-  font-family: 'Monofett', cursive;
-  color: #8D6A9F;
+  font-family: "Monofett", cursive;
+  color: #8d6a9f;
   font-size: 50px;
 }
