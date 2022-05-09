@@ -1,5 +1,5 @@
 .show-container {
-  width: 94vw;
+  width: 40vw;
   height: 70vh;
   background-color: white;
   padding: 0px;
@@ -108,4 +108,16 @@
 
 a.btn-fr-1 {
   margin: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .show-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .show-container {
+    width: 94vw;
+  }
 }

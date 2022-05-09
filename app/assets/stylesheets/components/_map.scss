@@ -82,7 +82,7 @@
 }
 
 .map-container {
-  width: 96vw;
+  width: 40vw;
   height: 73vh;
   background-color: white;
   padding: 0px;
@@ -91,6 +91,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  overflow: scroll;
 }
 
 .map-marker-info {
@@ -164,4 +165,16 @@
 
 .form-control {
   background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .map-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .map-container {
+    width: 94vw;
+  }
 }

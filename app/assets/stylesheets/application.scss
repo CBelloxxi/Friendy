@@ -28,7 +28,10 @@ html {
 body {
   // background: rgb(2,0,36);
   background-image: linear-gradient(#bdebe9, #c4cae8);
-  background-position: fixed;
+  // background-position: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
   // background-size: 100%;
   margin: 0;
 

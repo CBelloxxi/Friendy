@@ -1,5 +1,5 @@
 .new-donee-form {
-  width: 94vw;
+  width: 40vw;
   height: 70vh;
   background-color: white;
   padding: 16px;
@@ -69,4 +69,16 @@ textarea.form-control {
 
 .btn-fr-1 {
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .new-donee-form {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .new-donee-form {
+    width: 94vw;
+  }
 }

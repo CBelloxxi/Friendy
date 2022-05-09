@@ -3,6 +3,7 @@
   justify-content: center;
   margin-bottom: 70px;
   padding-left: 24px;
+  // position: relative;
 }
 
 .name-dash {
@@ -23,6 +24,7 @@
 .name-dash h2 {
   margin: 0px;
   color: #8d6a9f;
+  // position: relative;
 }
 
 .name-dash a {
@@ -35,7 +37,7 @@
   color: #8d6a9f;
 }
 
-.img-dash img {
+.img-dash-index img {
   width: 136px;
   height: 136px;
   border-radius: 50%;
@@ -48,7 +50,6 @@
 }
 
 .edit {
-  position: absolute;
   width: 48px;
   height: 48px;
   background-color: #8d6a9f;
@@ -57,14 +58,19 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin-top: -96px;
-  margin-left: 124px;
+  position: absolute;
+  z-index: 2;
+  left: 42px;
+  top: 68px;
+  // top: -96px;
+  // left: 124px;
 }
 
-.edit a {
+.edit > a {
   color: white;
   font-size: 16px;
   font-family: "Arimo", sans-serif;
+  margin: 0;
 }
 
 // .fa-chart-pie:before {

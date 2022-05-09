@@ -1,12 +1,15 @@
 
-<h2 style="padding-left: 24px; font-size: 24px; font-weight: bold;"><%= "Your dashboard" %></h2>
+<h2 style="padding-left: 24px; font-size: 24px; font-weight: bold; margin-bottom: 20px"><%= "Your dashboard" %></h2>
 <% @donees.each do |donee| %>
   <div class="container-dash">
     <div class="name-dash">
       <h2><%= link_to donee.first_name, dashboard_show_path(donee) %></h2>
       <h2><%= donee.location.include?(",") ? donee.location.split(",")[2] : donee.location %> </h2>
+      <div class="edit">
+        <%= link_to "edit", edit_donee_path(donee), class: "edit-link" %>
+      </div>
     </div>
-    <div class="img-dash">
+    <div class="img-dash-index">
       <%= link_to dashboard_show_path(donee) do  %>
         <%= cl_image_tag donee.photo.key, class: "img" %>
       <% end %>
@@ -17,9 +20,6 @@
       <%# <i class="fa fa-solid fa-file-pen" style="font-size: 2"></i>
     <% end %>
   <%# </div> %>
-  <div class="edit">
-    <%= link_to "edit", edit_donee_path(donee) %>
-  </div>
 <% end %>
 <br>
 <br>
