@@ -1,16 +1,17 @@
 .dash-show {
-  width: 94vw;
+  width: 40vw;
   height: 68vh;
-  background-color: #C5CBD3;
+  background-color: #c5cbd3;
   padding: 16px;
   margin: 0px;
   border-radius: 32px;
-  border:0;
+  border: 0;
   margin: auto;
   margin-top: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   height: 73vh;
-  }
+  overflow: scroll;
+}
 
 .history {
   width: 86vw;
@@ -38,21 +39,19 @@
   height: 74px;
   width: 222px;
   border-radius: 10px, 10px, 0px, 0px;
-  background-color: #8D6A9F;
+  background-color: #8d6a9f;
   height: 96px;
   width: 310px;
   border-radius: 83px;
-  margin-left: 26px;
+  margin-left: 28px;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-top: 48px;
   margin-top: 32px;
-
-
 }
 
-.history p{
+.history p {
   color: rgb(179, 176, 176);
   font-size: 16px;
   margin-left: 32px;
@@ -61,11 +60,11 @@
   padding-top: 5px;
   margin-bottom: 0px;
   font-weight: bold;
-  font-family: 'Arimo', sans-serif;
-  border-top: 1px solid #C5CBD3;
+  font-family: "Arimo", sans-serif;
+  border-top: 1px solid #c5cbd3;
 }
 
-.history h4{
+.history h4 {
   color: black;
   font-size: 20px;
   margin-left: 32px;
@@ -74,7 +73,19 @@
   padding-bottom: 5px;
   margin-bottom: 0px;
   font-weight: bold;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
+}
+
+.img-dash-show > img {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  border: 5px solid #f6f4f7;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  left: -46px;
+  top: -22px;
 }
 
 .dash-buttons {
@@ -83,65 +94,77 @@
 }
 
 .dash-name h3 {
-    font-size: 24px;
-    margin-left: 112px;
-    margin-right: 12px;
-    padding: 0px;
-    margin-bottom: 0px;
-    font-weight: bold;
-    margin-left: 120px;
-    color: white;
-    font-family: 'Arimo', sans-serif;
-  }
+  font-size: 24px;
+  margin-left: 112px;
+  margin-right: 12px;
+  padding: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  margin-left: 120px;
+  color: white;
+  font-family: "Arimo", sans-serif;
+}
 
 .dash-name h2 {
   margin: 0px;
 }
 
 .dash-show button {
-  color: #8D6A9F;
+  color: #8d6a9f;
 }
 
-.report-msg{
+.report-msg {
   color: black;
   font-size: 16px;
   margin-left: 32px;
   margin-right: 32px;
   padding-bottom: 5px;
   margin-bottom: 0px;
-  font-family: 'Arimo', sans-serif;
-  p{
-    color:black;
-    margin-left:0px;
-    margin-bottom:15px;
-    margin-right:0px
+  font-family: "Arimo", sans-serif;
+  p {
+    color: black;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    margin-right: 0px;
   }
 }
 .carousel-indicators {
-  color: #C5CBD3;
+  color: #c5cbd3;
 }
-.message{
-  font-size:12px;
-  font-style:italic;
-  font-weight:lighter;
+.message {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: lighter;
 }
-.view-button{
-  justify-content:space-between;
+.view-button {
+  justify-content: space-between;
   align-items: center;
-  a{
-    color:white;
-    font-size:14px;
-    background-color:#8D6A9F;
-    border-radius:10px;
-    padding:5px;
-    height:32px;
-    font-weight:bold;
+  a {
+    color: white;
+    font-size: 14px;
+    background-color: #8d6a9f;
+    border-radius: 10px;
+    padding: 5px;
+    height: 32px;
+    font-weight: bold;
   }
 }
 
-.mb-3{
-    margin-bottom:0rem !important;
+.mb-3 {
+  margin-bottom: 0rem !important;
 }
-.form-check{
-  padding-left:0em;
+.form-check {
+  padding-left: 0em;
+}
+
+@media screen and (max-width: 1024px) {
+  .dash-show {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dash-show {
+    width: 94vw;
+  }
 }

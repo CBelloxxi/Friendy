@@ -1,6 +1,5 @@
-
 .show-container-1 {
-  width: 94vw;
+  width: 40vw;
   height: 77vh;
   background-color: white;
   padding: 0px;
@@ -8,7 +7,7 @@
   border-radius: 32px;
   margin: auto;
   margin-top: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   overflow: scroll;
 }
 
@@ -19,7 +18,7 @@
 
 .show-container h2 {
   font-size: 32px;
-  color: #C5CBD3;
+  color: #c5cbd3;
 }
 
 .image-donation img {
@@ -43,11 +42,11 @@
 }
 
 .mapboxgl-ctrl {
-  height: 56px
+  height: 56px;
 }
 
 .assist-container {
-  width: 94vw;
+  width: 40vw;
   height: 79vh;
   background-color: white;
   padding: 0px;
@@ -55,12 +54,12 @@
   border-radius: 32px;
   margin: auto;
   margin-top: 0px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   overflow: scroll;
 }
 
 .mapboxgl-ctrl-geocoder--input:last-child {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 fieldset {
@@ -71,7 +70,7 @@ fieldset {
   padding: 0px 16px 0px 16px;
 }
 
-.buttons{
+.buttons {
   padding: 8px 0px;
   display: flex;
   justify-content: space-between;
@@ -80,19 +79,18 @@ fieldset {
 .btn-fr {
   font-size: 16px;
   display: inline-block;
-  background-color: #8D6A9F;
+  background-color: #8d6a9f;
   border-radius: 8px;
   padding: 10px 20px;
   color: white;
   font-weight: bold;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
   bottom: 0px;
 }
 
-
 .btn-fr:hover {
   background-color: #d8b5e9;
-  }
+}
 
 .qr-code {
   height: 150px;
@@ -108,5 +106,17 @@ fieldset {
 .form-select {
   border-radius: 10px;
   border: none;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .assist-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .assist-container {
+    width: 94vw;
+  }
 }

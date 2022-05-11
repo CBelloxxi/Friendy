@@ -77,7 +77,7 @@
   border-radius: 10px;
 }
 .show-container {
-    width: 94vw;
+    width: 40vw;
     height: 75vh;
     background-color: white;
     padding: 0px;
@@ -88,6 +88,20 @@
     box-shadow: 0 0 15px rgb(0 0 0 / 15%);
     overflow: scroll;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .show-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .show-container {
+    width: 94vw;
+  }
+}
+
 </style>
 
 <%# data-controller="donation" %>
