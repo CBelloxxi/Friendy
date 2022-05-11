@@ -48,9 +48,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   margin-top: 7px;
-  margin-left: 141px;
+  margin-left: 125px;
 }
 
 .edit-map a {
@@ -79,7 +79,7 @@
   height: 20px;
   top: 0;
   left: 0;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border-radius: 50rem;
   margin-top: 20px;
   margin-left: 165px;
@@ -184,6 +184,22 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-check-input[type="checkbox"]:checked + .form-check-label {
+  cursor: pointer;
+  color: #f9fafb;
+  position: relative;
+  height: 35px;
+  width: 139px;
+  background-color: #64c89c;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(22, 107, 41, 0.6);
 }
 
 .form-control {
