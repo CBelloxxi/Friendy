@@ -1,14 +1,14 @@
 
 <div class="map-container">
   <div class="container-index-card">
-    <div class= "show-map" style="width: 100%; height: 480px; padding: 0px;"
+    <div class= "show-map" style="width: 100%; height: 360px; padding: 0px;"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json %>"
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
     <div class="thank-you-message">
-      <h2 style="text-align:center;">Thank you</h2>
-      <p style="text-align:center;">Your report has been sent by the Friendy Team and <%= @report.donee.first_name %> will be attended to.</p>
+      <h2 style="text-align:center;">Thank You!</h2>
+      <p style="text-align:center;">Your report has been sent to the Friendy Team and <%= @report.donee.first_name %> will be attended to.</p>
     </div>
   </div>
 </div>

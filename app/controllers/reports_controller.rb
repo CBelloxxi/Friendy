@@ -43,15 +43,15 @@ class ReportsController < ApplicationController
         lat: report.latitude,
         lng: report.longitude,
         report_window: render_to_string(partial: "report_window", locals: { report: report }),
-        image_url: helpers.asset_url("person-solid.svg")
+        image_url: helpers.asset_url("person.png")
       }
     end
-    @markers = [@markers.last]
+
   end
 
   private
 
   def report_params
-    params.require(:report).permit(:message, :assistance_type, :location,)
+    params.require(:report).permit(:message, :assistance_type, :location)
   end
 end

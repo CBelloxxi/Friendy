@@ -9,6 +9,7 @@
   margin: auto;
   margin-top: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  overflow: scroll;
 }
 
 .show-container p {
@@ -22,7 +23,7 @@
 }
 
 .image-donation img {
-  height: 300px;
+  height: 232px;
   width: 100%;
   object-fit: cover;
   object-fit: cover;
@@ -32,7 +33,7 @@
 }
 
 .image-assistance img {
-  height: 265px;
+  height: 224px;
   width: 100%;
   object-fit: cover;
   object-fit: cover;
@@ -47,18 +48,18 @@
 
 .assist-container {
   width: 94vw;
-  height: 74vh;
+  height: 79vh;
   background-color: white;
   padding: 0px;
   margin: 0px;
   border-radius: 32px;
   margin: auto;
-  margin-top: 16px;
+  margin-top: 0px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
   overflow: scroll;
 }
 
-.mapboxgl-ctrl-geocoder--input {
+.mapboxgl-ctrl-geocoder--input:last-child {
   background-color: #F4F4F4;
 }
 

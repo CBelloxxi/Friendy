@@ -11,15 +11,16 @@
       data-toggle-checkbox-target="checkboxes">
         <div class="selection-boxes">
           <%= f.input :assistance_type, as: :check_boxes, label: '&nbsp;'.html_safe, collection: [["Emergency", "Emergency"], ["Non-Emergency", "Non-Emergency"]],
-          input_html: {multiple: false, data: {
-          action: "change->toggle-checkbox#toggle",
-          toggle_checkbox_target: "selection"}} %>
+            input_html: { multiple: false, data: {
+            action: "change->toggle-checkbox#toggle",
+            toggle_checkbox_target: "selection"},
+            class: "remove_checkbox" } %>
         </div>
       </div>
       <%= f.input :message, as: :text %>
       <div class="buttons", style="margin-top: 24px; padding: 0px;">
+        <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin:0px;" %>
         <%= f.submit "Create Report", class: "btn-fr" %>
-          <%= link_to "Back", donees_path, class: "btn-fr-1", style: "margin:0px;" %>
       </div>
     <% end %>
   </div>

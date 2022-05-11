@@ -6,8 +6,8 @@
     <h2>Checkout summary</h2>
     <p>Donation for <strong><%= @order.donation.donee.first_name %></strong> of <strong><%= humanized_money_with_symbol (@order.amount)*100 %></strong></p>
     <div class="buttons">
+      <%= link_to "Cancel", dashboard_path, class: "btn-fr-1", style: "margin: 0px" %>
       <button id="pay" class="btn-fr">Pay</button>
-      <%= link_to "Cancel", dashboard_path, class: "btn-fr-1" %>
     </div>
        <%# Commented for the lecture, remove comments. %>
     <script src="https://js.stripe.com/v3/"></script>

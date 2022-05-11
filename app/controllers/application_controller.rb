@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
     p session[:redirect_path]
     session[:redirect_path] || root_path
   end
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end

@@ -6,7 +6,7 @@
     <div class="dash-nav">
       <% if params[:controller]  == "pages" && (params[:action] == "index" || params[:action] == "show") %>
         <%= link_to new_donee_path do  %>
-          <i class="fa fa-regular fa-user-plus" ></i>
+          <i class="fa fa-thin fa-person-circle-plus"></i>
         <% end %>
         <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } do %>
           <%= image_tag 'vectorpaint.svg', style: "color: white;" %>
