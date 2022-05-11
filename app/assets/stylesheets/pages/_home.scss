@@ -42,7 +42,7 @@ body.home .navbar {
 
 .impact p {
   font-family: 'Arimo';
-  font-size: 20px;
+  font-size: 15px;
   color: white;
 }
 
@@ -56,11 +56,12 @@ body.home .navbar {
 
 .donees {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
-  align-items: center;
+  align-items: left;
   margin-bottom: 10px;
   margin-top: 0px;
+  margin-right: 60px;
 }
 
 .d-icon {
@@ -81,7 +82,7 @@ img {
   border-radius: 8px;
   width: 300px;
   height: 225px;
-  margin-left: 45px;
+  margin-left: 17px;
 }
 
 .text-1 {
