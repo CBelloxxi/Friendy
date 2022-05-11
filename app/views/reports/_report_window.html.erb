@@ -14,10 +14,8 @@
   <div>
   <%= report.message %>
   <div class="pin-buttons">
-    <div class="edit-map">
-      <%= link_to edit_report_path(@report) do %>
-        <%= image_tag 'edit.svg' %>
-      <% end %>
+    <div class="edit-map" style="font-size:10px; color:black;">
+      <%= link_to "Edit", edit_report_path(@report)%>
     </div>
   </div>
   </div>

@@ -43,6 +43,44 @@
 .edit-map {
   width: 48px;
   height: 48px;
+  background-color: #8D6A9F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin-top: 7px;
+  margin-left: 141px;
+}
+
+.edit-map a {
+  color: white;
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.toggle {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggle + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.toggle + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
   margin-top: 20px;
   margin-left: 165px;
 }
@@ -63,10 +101,12 @@
   position: relative;
   background-color:#fdfdfd;
   border-radius:10px;
-  padding: 10px ;
+  padding: 33px;
+  padding-top: 15px;
   color:#606163;
-
+  position: relative;
 }
+
 .mapboxgl-popup-content{
   border-radius:10px;
   border:none;
